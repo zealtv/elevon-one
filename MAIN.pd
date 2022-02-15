@@ -1,0 +1,8 @@
+#N canvas 615 23 751 605 12;
+#X declare -path ./elevon;
+#X declare -path ./bop;
+#X obj 20 20 declare -path ./elevon;
+#X obj 20 45 declare -path ./bop;
+#X obj 20 100 lvn.telemetry;
+#X obj 160 100 bop;
+#A saved 0;
