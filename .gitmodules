@@ -1,0 +1,6 @@
+[submodule "bop"]
+	path = bop
+	url = https://github.com/zealtv/bop
+[submodule "elevon"]
+	path = elevon
+	url = https://github.com/zealtv/elevon
