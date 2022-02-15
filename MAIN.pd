@@ -1,4 +1,4 @@
-#N canvas 101 207 1022 605 12;
+#N canvas 0 23 1680 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -10,23 +10,132 @@
 #X obj 20 74 declare -path ./subpatches;
 #X obj 430 140 gyrosc2pd;
 #X obj 430 120 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
-#X obj 430 170 route gyro accel;
+#000000 0 1;
 #X text 430 60 receive gyrOSC data for realtime feedback \; (port
 9999), f 45;
-#X obj 430 200 unpack f f f;
-#X obj 510 300 hsl 128 15 -1.5708 1.5708 0 0 empty empty empty -2 -8
-0 10 #fcfcfc #000000 #000000 6323 1;
-#X text 660 300 pitch;
-#X obj 510 270 hsl 128 15 3.14159 -3.14159 0 0 empty empty empty -2
--8 0 10 #fcfcfc #000000 #000000 6302 1;
-#X text 660 270 roll;
-#X obj 510 240 hsl 128 15 3.14159 -3.14159 0 0 empty empty empty -2
--8 0 10 #fcfcfc #000000 #000000 6625 1;
-#X text 662 238 yaw;
-#X connect 5 0 7 0;
+#X obj 430 220 unpack f f f;
+#X obj 430 370 hsl 128 15 -1.5708 1.5708 0 0 empty empty empty -2 -8
+0 10 #fcfcfc #000000 #000000 6360 1;
+#X obj 470 340 hsl 128 15 3.14159 -3.14159 0 0 empty empty empty -2
+-8 0 10 #fcfcfc #000000 #000000 6294 1;
+#X obj 160 530 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 6162 1;
+#X obj 720 220 unpack f f f;
+#X obj 160 470 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 6347 1;
+#X obj 160 420 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 6351 1;
+#X obj 160 370 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 6367 1;
+#X obj 880 220 unpack f f f;
+#X obj 159 689 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 6348 1;
+#X obj 159 639 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 6345 1;
+#X obj 159 589 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 6351 1;
+#X text 160 230 X = forward \; Y = right \; Z = up;
+#X text 960 310 X (roll);
+#X text 920 340 Y (pitch);
+#X text 1000 280 Z (yaw);
+#X obj 920 310 s rvx;
+#X obj 880 340 s rvy;
+#X obj 960 280 s rvz;
+#X obj 159 659 r rvz;
+#X obj 159 609 r rvx;
+#X obj 160 560 r rvy;
+#X obj 1080 220 unpack f f f;
+#X floatatom 1080 310 5 0 0 0 - - -, f 5;
+#X floatatom 1150 310 5 0 0 0 - - -, f 5;
+#X floatatom 1220 310 5 0 0 0 - - -, f 5;
+#X text 1210 120 X = forward \; Y = right \; Z = up;
+#X obj 1080 350 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 6525 1;
+#X obj 1150 350 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 6334 1;
+#X obj 1220 350 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 2 1;
+#X text 610 340 X (roll);
+#X text 570 370 Y (pitch);
+#X obj 760 250 * -1;
+#X obj 800 250 * -1;
+#X obj 720 250 * -1;
+#X obj 800 280 s az;
+#X obj 760 310 s ax;
+#X obj 720 340 s ay;
+#X obj 160 440 r ay;
+#X obj 160 390 r ax;
+#X obj 160 340 r az;
+#X text 840 280 up;
+#X text 760 340 right;
+#X text 800 310 forward;
+#X text 1240 468 back;
+#X text 1240 350 front;
+#X text 1170 468 bottom;
+#X text 1170 350 top;
+#X text 1100 468 left;
+#X text 1100 350 right;
+#X obj 510 250 sub.bop.util.scale -3.14159 3.14159 0 360, f 22;
+#X obj 510 290 s h;
+#X text 550 290 heading;
+#X obj 160 500 r h;
+#X obj 430 170 route gyro accel rrate grav quat, f 91;
+#X obj 1250 220 unpack f f f f;
+#X obj 1250 260 s rw;
+#X obj 1290 260 s rx;
+#X obj 1330 260 s ry;
+#X obj 1370 260 s rz;
+#X obj 430 530 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 12693 1;
+#X obj 470 530 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 6362 1;
+#X obj 510 530 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 6437 1;
+#X obj 430 490 r rw;
+#X obj 470 490 r rx;
+#X obj 510 490 r ry;
+#X obj 550 490 r rz;
+#X obj 550 530 vsl 15 128 -1 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
+#000000 #000000 6055 1;
+#X text 590 490 todo - get pitch \, yaw \; todo - get gravity;
+#X connect 5 0 62 0;
 #X connect 6 0 5 0;
-#X connect 7 0 9 0;
-#X connect 9 0 10 0;
-#X connect 9 1 12 0;
-#X connect 9 2 14 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 8 2 58 0;
+#X connect 12 0 42 0;
+#X connect 12 1 40 0;
+#X connect 12 2 41 0;
+#X connect 16 0 25 0;
+#X connect 16 1 24 0;
+#X connect 16 2 26 0;
+#X connect 27 0 17 0;
+#X connect 28 0 18 0;
+#X connect 29 0 19 0;
+#X connect 30 0 31 0;
+#X connect 30 1 32 0;
+#X connect 30 2 33 0;
+#X connect 31 0 35 0;
+#X connect 32 0 36 0;
+#X connect 33 0 37 0;
+#X connect 40 0 44 0;
+#X connect 41 0 43 0;
+#X connect 42 0 45 0;
+#X connect 46 0 13 0;
+#X connect 47 0 14 0;
+#X connect 48 0 15 0;
+#X connect 58 0 59 0;
+#X connect 61 0 11 0;
+#X connect 62 0 8 0;
+#X connect 62 1 12 0;
+#X connect 62 2 16 0;
+#X connect 62 3 30 0;
+#X connect 62 4 63 0;
+#X connect 63 0 64 0;
+#X connect 63 1 65 0;
+#X connect 63 2 66 0;
+#X connect 63 3 67 0;
+#X connect 71 0 68 0;
+#X connect 72 0 69 0;
+#X connect 73 0 70 0;
+#X connect 74 0 75 0;
