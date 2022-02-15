@@ -1,8 +1,32 @@
-#N canvas 615 23 751 605 12;
+#N canvas 101 207 1022 605 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
+#X declare -path ./subpatches;
 #X obj 20 20 declare -path ./elevon;
 #X obj 20 45 declare -path ./bop;
-#X obj 20 100 lvn.telemetry;
-#X obj 160 100 bop;
+#X obj 20 120 lvn.telemetry;
+#X obj 160 120 bop;
 #A saved 0;
+#X obj 20 74 declare -path ./subpatches;
+#X obj 430 140 gyrosc2pd;
+#X obj 430 120 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 430 170 route gyro accel;
+#X text 430 60 receive gyrOSC data for realtime feedback \; (port
+9999), f 45;
+#X obj 430 200 unpack f f f;
+#X obj 510 300 hsl 128 15 -1.5708 1.5708 0 0 empty empty empty -2 -8
+0 10 #fcfcfc #000000 #000000 6323 1;
+#X text 660 300 pitch;
+#X obj 510 270 hsl 128 15 3.14159 -3.14159 0 0 empty empty empty -2
+-8 0 10 #fcfcfc #000000 #000000 6302 1;
+#X text 660 270 roll;
+#X obj 510 240 hsl 128 15 3.14159 -3.14159 0 0 empty empty empty -2
+-8 0 10 #fcfcfc #000000 #000000 6625 1;
+#X text 662 238 yaw;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 9 0 10 0;
+#X connect 9 1 12 0;
+#X connect 9 2 14 0;
