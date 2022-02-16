@@ -1,4 +1,4 @@
-#N canvas 0 23 840 1005 12;
+#N canvas 104 23 1472 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -9,14 +9,73 @@
 #X obj 20 20 declare -path ./elevon;
 #X obj 20 45 declare -path ./bop;
 #X obj 20 180 lvn.telemetry;
-#X obj 140 180 bop;
-#A saved 0;
+#X obj 360 90 bop;
+#A saved 100;
 #X obj 20 74 declare -path ./subpatches;
 #X obj 30 110 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X text 1610 1810 comment;
 #X obj 30 140 gyrosc2elevon;
 #X text 50 110 receive realtime from gyrOSC (port 9999), f 41;
 #X text 240 30 X = forward \; Y = right \; Z = up \;
 ;
+#X obj 360 490 bop.noteslider;
+#A saved 3.37615 1 0.847826;
+#X obj 360 770 bop.rhodes;
+#A saved 0;
+#X obj 610 910 bop.distortion;
+#A saved 0.842907 0.0437829 0.978478 0;
+#X obj 610 1120 bop.send;
+#A saved master;
+#X obj 360 30 bop.receive;
+#A saved master;
+#X obj 610 1020 bop.mix;
+#A saved 0 0.526312 0;
+#X obj 580 90 bop.palette;
+#X obj 610 570 bop.synth;
+#A saved 0.01 0.875 0.456522 0 0.646739 0.657609 0.657609 1 0.0340886
+0.460303 0.0177828 1 0 0.01 0.0460303;
+#X obj 610 350 bop.euclidean;
+#A saved 16.4348 4.76087 0 4 4.56548 6.15476 1.11674 0 1 125.488;
+#X obj 820 350 bop.euclidean;
+#A saved 16.0435 3.71739 0 4 4.56548 1.57143 2.38817 0 1 125.488;
+#X obj 360 350 bop.ramp;
+#A saved 12 5.9 noteslider 0 1 0;
+#X obj 360 590 bop.notefx;
+#A saved 7.17073 -2.78049 0 44.1739 71.7826 3.01875 1;
+#X obj 360 830 bop.reverb;
+#A saved 0.959511 0.0951087 1.65217 0.925711 0.0300788 0 0;
+#X obj 360 1000 bop.mix;
+#A saved 0 0.253613 0;
+#X obj 360 1100 bop.send;
+#A saved master;
 #X connect 7 0 9 0;
+#X connect 12 2 23 2;
+#X connect 13 0 24 0;
+#X connect 13 1 24 1;
+#X connect 13 2 24 2;
+#X connect 13 3 24 3;
+#X connect 14 0 17 0;
+#X connect 14 1 17 1;
+#X connect 14 2 17 2;
+#X connect 14 3 17 3;
+#X connect 16 0 5 0;
+#X connect 16 1 5 1;
+#X connect 16 2 5 2;
+#X connect 16 3 5 3;
+#X connect 17 0 15 0;
+#X connect 17 1 15 1;
+#X connect 17 2 15 2;
+#X connect 17 3 15 3;
+#X connect 19 0 14 0;
+#X connect 19 1 14 1;
+#X connect 20 2 19 2;
+#X connect 21 2 19 2;
+#X connect 22 3 12 3;
+#X connect 23 2 13 2;
+#X connect 24 0 25 0;
+#X connect 24 1 25 1;
+#X connect 24 2 25 2;
+#X connect 24 3 25 3;
+#X connect 25 0 26 0;
+#X connect 25 1 26 1;
