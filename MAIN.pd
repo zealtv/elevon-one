@@ -1,204 +1,22 @@
-#N canvas 0 23 1680 1005 12;
+#N canvas 0 23 840 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
+#X obj 230 30 cnv 15 107 59 empty empty empty 20 12 0 14 #f5dcf2 #404040
+0;
+#X obj 20 100 cnv 15 328 69 empty empty empty 20 12 0 14 #dff7f1 #404040
+0;
 #X obj 20 20 declare -path ./elevon;
 #X obj 20 45 declare -path ./bop;
-#X obj 20 120 lvn.telemetry;
-#X obj 150 120 bop;
+#X obj 20 180 lvn.telemetry;
+#X obj 140 180 bop;
 #A saved 0;
 #X obj 20 74 declare -path ./subpatches;
-#X obj 430 140 gyrosc2pd;
-#X obj 430 120 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 30 110 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
-#X text 430 60 receive gyrOSC data for realtime feedback \; (port
-9999), f 45;
-#X obj 150 460 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 3838 1;
-#X obj 430 240 unpack f f f;
-#X obj 150 400 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 6357 1;
-#X obj 150 350 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 6350 1;
-#X obj 150 300 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 6375 1;
-#X obj 600 240 unpack f f f;
-#X obj 149 619 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 6331 1;
-#X obj 149 569 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 6362 1;
-#X obj 149 519 hsl 128 15 -3 3 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 4265 1;
-#X text 680 330 X (roll);
-#X text 640 360 Y (pitch);
-#X obj 640 330 s rvx;
-#X obj 600 360 s rvy;
-#X obj 680 300 s rvz;
-#X obj 149 589 r rvz;
-#X obj 149 539 r rvx;
-#X obj 150 490 r rvy;
-#X obj 470 270 * -1;
-#X obj 510 270 * -1;
-#X obj 430 270 * -1;
-#X obj 510 300 s az;
-#X obj 470 330 s ax;
-#X obj 430 360 s ay;
-#X obj 150 370 r ay;
-#X obj 150 320 r ax;
-#X obj 150 270 r az;
-#X text 550 300 up;
-#X text 470 360 right;
-#X text 510 330 forward;
-#X obj 940 270 s h;
-#X text 970 270 heading;
-#X obj 150 430 r h;
-#X obj 770 300 unpack f f f f;
-#X obj 770 340 s rw;
-#X obj 810 340 s rx;
-#X obj 850 340 s ry;
-#X obj 890 340 s rz;
-#X text 20 490 X = forward \; Y = right \; Z = up \; ;
-#X floatatom 940 240 5 0 0 0 - - -, f 5;
-#X obj 770 240 s quat;
 #X text 1610 1810 comment;
-#X obj 150 741 hsl 128 15 -3.14159 3.14159 0 0 empty empty empty -2
--8 0 10 #fcfcfc #000000 #000000 6323 1;
-#X obj 600 660 expr -1 * atan2( 2 * ($f1 * $f4 + $f2 * $f3) \, 1 -
-2 * ($f3 * $f3 + $f4 * $f4)), f 82;
-#X obj 150 680 hsl 128 15 -1.5708 1.5708 0 0 empty empty empty -2 -8
-0 10 #fcfcfc #000000 #000000 6422 1;
-#X obj 600 630 r quat;
-#X obj 600 430 r quat;
-#X obj 1490 460 abs;
-#X obj 1490 590 >;
-#X obj 1520 520 pi;
-#X obj 1520 550 / 2;
-#X obj 1520 490 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 1490 630 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X text 1510 630 INVERTED;
-#X obj 600 530 r quat;
-#X obj 1220 700 *;
-#X obj 1200 740 +;
-#X obj 1200 580 + 3.14159;
-#X obj 1230 780 * 2;
-#X obj 1200 820 fmod, f 5;
-#X obj 1520 460 loadbang;
-#X obj 150 800 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 6921 1;
-#X obj 1490 670 s \$0-inverted;
-#X obj 1220 620 r \$0-inverted;
-#X obj 1350 650 s \$0-pi;
-#X obj 1352 612 pi;
-#X obj 1352 582 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 1350 550 loadbang;
-#X obj 1240 650 r \$0-pi;
-#X obj 1230 740 r \$0-pi;
-#X obj 1220 900 * 2;
-#X obj 1220 860 r \$0-pi;
-#X obj 1200 940 /;
-#X obj 1200 970 * 360;
-#X text 1310 740 this takes into account inversion to correct yaw \,
-resulting in heading if normalised to magnetic north - only required
-if not available as precomputed data point, f 25;
-#X obj 1200 550 gate;
-#X obj 1200 490 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
-#X text 1230 490 calculate heading from yaw, f 27;
-#X text 700 690 yaw is offset by 180 degrees orientation is inverted
-;
-#X obj 600 560 expr asin( 2 * ($f1 * $f3 - $f4 * $f2) );
-#X text 220 710 yaw is corrected by identifying inversion, f 44;
-#X obj 600 460 expr atan2( 2 * ($f1 * $f2 + $f3 * $f4) \, 1- 2 * ($f2
-* $f2 + $f3 * $f3)), f 73;
-#X text 290 741 PITCH;
-#X obj 600 490 s \$0-pitch;
-#X obj 1490 430 r \$0-pitch;
-#X obj 150 710 r \$0-pitch;
-#X text 290 680 ROLL;
-#X text 290 800 YAW;
-#X obj 1200 430 loadbang;
-#X msg 1200 460 1;
-#X obj 150 830 r \$0-inverted;
-#X obj 150 860 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 1230 510 r \$0-yaw-raw;
-#X obj 600 690 s \$0-yaw-raw;
-#X obj 150 770 r \$0-yaw;
-#X obj 1200 1000 s \$0-yaw;
-#X obj 600 590 s \$0-roll;
-#X obj 150 650 r \$0-roll;
-#X text 290 830 INVERTED;
-#X obj 770 269 r quat;
-#X obj 430 170 route accel rrate quat comp, f 98;
-#X text 600 720 Φ = atan2(2(q0q1+q2q3) \, 1-2(q12+q22)) \; θ
-= asin(2(q0q2-q3q1)) \; ψ = atan2(2(q0q3+q1q2)
-\, 1-2(q22+q32)) \; , f 61;
-#X connect 5 0 107 0;
-#X connect 6 0 5 0;
-#X connect 9 0 27 0;
-#X connect 9 1 25 0;
-#X connect 9 2 26 0;
-#X connect 13 0 20 0;
-#X connect 13 1 19 0;
-#X connect 13 2 21 0;
-#X connect 22 0 14 0;
-#X connect 23 0 15 0;
-#X connect 24 0 16 0;
-#X connect 25 0 29 0;
-#X connect 26 0 28 0;
-#X connect 27 0 30 0;
-#X connect 31 0 10 0;
-#X connect 32 0 11 0;
-#X connect 33 0 12 0;
-#X connect 39 0 8 0;
-#X connect 40 0 41 0;
-#X connect 40 1 42 0;
-#X connect 40 2 43 0;
-#X connect 40 3 44 0;
-#X connect 46 0 37 0;
-#X connect 50 0 100 0;
-#X connect 52 0 50 0;
-#X connect 53 0 88 0;
-#X connect 54 0 55 0;
-#X connect 55 0 59 0;
-#X connect 56 0 57 0;
-#X connect 57 0 55 1;
-#X connect 58 0 56 0;
-#X connect 59 0 69 0;
-#X connect 61 0 86 0;
-#X connect 62 0 63 1;
-#X connect 63 0 66 0;
-#X connect 64 0 63 0;
-#X connect 65 0 66 1;
-#X connect 66 0 79 0;
-#X connect 67 0 58 0;
-#X connect 70 0 62 0;
-#X connect 72 0 71 0;
-#X connect 73 0 72 0;
-#X connect 74 0 73 0;
-#X connect 75 0 62 1;
-#X connect 76 0 65 0;
-#X connect 77 0 79 1;
-#X connect 78 0 77 0;
-#X connect 79 0 80 0;
-#X connect 80 0 102 0;
-#X connect 82 0 64 0;
-#X connect 83 0 82 0;
-#X connect 86 0 103 0;
-#X connect 88 0 90 0;
-#X connect 91 0 54 0;
-#X connect 92 0 49 0;
-#X connect 95 0 96 0;
-#X connect 96 0 83 0;
-#X connect 97 0 98 0;
-#X connect 99 0 82 1;
-#X connect 101 0 68 0;
-#X connect 104 0 51 0;
-#X connect 106 0 40 0;
-#X connect 107 0 9 0;
-#X connect 107 1 13 0;
-#X connect 107 2 47 0;
-#X connect 107 3 46 0;
+#X obj 30 140 gyrosc2elevon;
+#X text 50 110 receive realtime from gyrOSC (port 9999), f 41;
+#X text 240 30 X = forward \; Y = right \; Z = up \;
+;
+#X connect 7 0 9 0;
