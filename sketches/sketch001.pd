@@ -8,7 +8,7 @@
 #X obj 410 1220 bop.send;
 #A saved master;
 #X obj 410 1120 bop.mix;
-#A saved 0 0.238229 0;
+#A saved 0 0.185475 0;
 #X obj 410 360 bop.synth;
 #A saved 0.0951176 0.782609 0.228261 0.961957 0.0163043 0.532609 0.793478
 1 0.0437829 0.0591206 0.135031 1 0 0.01 0.0376779;
@@ -23,7 +23,7 @@
 #X obj 160 770 bop.reverb;
 #A saved 0.822011 0.190217 1.69565 0.292735 0.177828 0 0;
 #X obj 160 660 bop.mix;
-#A saved 0 0.409763 -0.76378;
+#A saved 0 0.409763 -0.622047;
 #X obj 160 950 bop.send;
 #A saved master;
 #X msg 490 110 note 6;
@@ -48,7 +48,7 @@
 #X obj 880 1080 bop.send;
 #A saved master;
 #X obj 880 750 bop.mix;
-#A saved 0 0.170627 0.582677;
+#A saved 0 0.170627 0.850394;
 #X obj 1252 225 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 1190 340 poly 2 1;
@@ -63,17 +63,17 @@
 #X msg 1170 280 64 60;
 #X msg 1250 250 64 100;
 #X obj 1370 480 bop.sampler;
-#A saved cayn01.wav 0 0 0 1 0 5.33018 8;
+#A saved cayn01.wav 0 0 0 1 0 5.33018 1;
 #X obj 1370 870 bop.send;
 #A saved master;
 #X obj 1370 720 bop.mix;
-#A saved 0 0.332614 -0.472441;
+#A saved 0 0.332614 -0.787402;
 #X obj 880 870 bop.reverb;
-#A saved 0.866848 0.726902 1.32609 0.0949172 0.33246 0 0;
+#A saved 0.454348 0.3125 0.652174 0.0949172 0.33246 0 0;
 #X obj 1610 480 bop.sampler;
 #A saved cayn01.wav 0 0 0.167337 1 0 5.33018 1;
 #X obj 1610 720 bop.mix;
-#A saved 0 0.42722 0.535433;
+#A saved 0 0.42722 0.913386;
 #X msg 1740 430 72 127;
 #X obj 1500 370 sel 0;
 #X obj 1560 370 sel 0;
