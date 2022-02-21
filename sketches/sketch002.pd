@@ -1,0 +1,9 @@
+#N canvas 650 83 770 617 12;
+#X obj 100 100 inlet;
+#X obj 100 130 switch~;
+#X obj 200 400 bop.rhodes;
+#A saved 0;
+#X obj 203 37 bop.rhythm;
+#A saved 16.375 1.72083 1 1 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+;
+#X connect 0 0 1 0;
