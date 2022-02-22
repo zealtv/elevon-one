@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1131 855 12;
+#N canvas 323 23 1131 855 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
