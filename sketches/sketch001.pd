@@ -52,8 +52,8 @@
 #X obj 1460 530 pack f f;
 #X obj 1340 610 bop.sampler;
 #A saved ride-sizzle.wav 0 0 0 1 0 4.2951 1;
-#X msg 1410 410 64 60;
-#X msg 1350 410 64 100;
+#X msg 1350 410 64 60;
+#X msg 1450 410 64 100;
 #X obj 1610 610 bop.sampler;
 #A saved cayn01.wav 0 0 0 1 0 5.33018 1;
 #X obj 1610 1000 bop.send;
@@ -68,21 +68,18 @@
 #A saved 0 0.42722 0.913386;
 #X msg 1980 560 72 127;
 #X msg 1740 560 77 127;
-#X text 890 150 gate object similar to euclidean but gates all incoming
-signals (audio \, messages \, and notes), f 30;
-#X text 890 227 maybe a time object would be more useful - can always
-control a gate, f 30;
 #X obj 1217 39 bop.rhythm;
-#A saved 24 2.42321 1 1 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 0\ 1\ 0\ 1
+#A saved 16 1.58036 1 1 1\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 1\ 0\ 1\ 0\ 1\ 0\ 0\ 1\ 1\ 0\ 0\ 1\ 0\ 1\ 0\ 1
 ;
-#X obj 1407 269 route note;
 #X obj 1580 280 bop.rhythm;
 #A saved 5.625 5.30298 1 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj 1920 260 bop.rhythm;
 #A saved 4.625 5.09226 1 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
-#X obj 1400 320 route 1 9;
+#X obj 1407 269 route cell;
+#X obj 1400 320 route 16 11;
+#X msg 1400 410 64 30;
 #X connect 0 2 9 2;
 #X connect 1 0 11 0;
 #X connect 1 1 11 1;
@@ -145,10 +142,11 @@ control a gate, f 30;
 #X connect 37 1 33 1;
 #X connect 38 0 36 2;
 #X connect 39 0 32 2;
-#X connect 42 3 43 0;
-#X connect 43 0 46 0;
-#X connect 44 3 39 0;
-#X connect 45 3 38 0;
-#X connect 46 0 31 0;
-#X connect 46 1 30 0;
-#X connect 46 2 31 0;
+#X connect 40 3 43 0;
+#X connect 41 3 39 0;
+#X connect 42 3 38 0;
+#X connect 43 0 44 0;
+#X connect 44 0 30 0;
+#X connect 44 1 45 0;
+#X connect 44 2 31 0;
+#X connect 45 0 26 0;

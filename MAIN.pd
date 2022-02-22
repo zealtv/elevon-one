@@ -1,36 +1,42 @@
 #N struct text float x float y text t;
-#N canvas 0 23 960 855 12;
+#N canvas 0 23 1440 855 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
 #X declare -path ./sketches;
 #X declare -path ./samples;
 #X declare -path ./templates;
+#X obj 560 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X obj 300 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X obj 40 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
 #X obj 40 270 cnv 15 240 15 empty \$0-version-text Pd-l2ork-2.17.0\ 20210829-rev.e47b7c65
 5 6 0 10 #e0e0e0 #404040 0;
-#X obj 40 730 cnv 15 100 89 empty empty empty 20 12 0 14 #edf7ee #404040
+#X obj 40 770 cnv 15 100 89 empty empty empty 20 12 0 14 #edf7ee #404040
 0;
 #X obj 40 130 declare -path ./elevon;
 #X obj 40 150 declare -path ./bop;
-#X obj 40 360 lvn.telemetry;
+#X obj 40 400 lvn.telemetry;
 #X obj 650 520 bop;
 #A saved 100;
 #X obj 40 170 declare -path ./subpatches;
-#X obj 50 840 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 40 340 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X text 1610 1810 comment;
-#X obj 50 870 gyrosc2elevon;
+#X obj 40 370 gyrosc2elevon;
 #X obj 650 360 bop.receive;
 #A saved master;
 #X obj 650 420 bop.mix;
-#A saved 0 0.39302 0;
+#A saved 0 0.484179 0;
 #X obj 300 430 lvn.hyperstave 7;
 #X msg 360 390 connect 0;
 #X msg 300 390 hue \$1;
 #X floatatom 300 360 5 0 0 0 - - -, f 5;
-#X text 50 750 X = forward;
-#X text 50 770 Y = right;
-#X text 50 790 Z = up;
+#X text 50 790 X = forward;
+#X text 50 810 Y = right;
+#X text 50 830 Z = up;
 #X obj 300 600 route 0 1 2 3 4 5 6, f 20;
 #N canvas 178 23 1324 942 still 0;
 #X obj 90 160 inlet;
@@ -142,8 +148,8 @@ and are output from its bottom right outlet, f 35;
 #X obj 40 50 cnv 3 297 8 empty \$0cvs0 -=ELEVON-ONE=- 23 -3 0 30 #ff9999
 #000000 0;
 #X obj 40 210 declare -path ./sketches;
-#X obj 450 160 sketch001;
-#X obj 450 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 560 160 sketch001;
+#X obj 560 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 40 190 declare -path ./samples;
 #X text 500 460 0.1;
@@ -159,46 +165,50 @@ and are output from its bottom right outlet, f 35;
 #X obj 300 160 stave-subpatch;
 #X text 40 100 Libraries and Assets;
 #X text 300 100 Templates;
-#X text 450 100 Sketches;
-#X text 70 830 enable gyrOSC (port 9999), f 13;
-#X text 80 730 ↗️;
-#N canvas 0 22 450 300 get-version 0;
+#X text 560 100 Sketches;
+#X text 60 330 enable gyrOSC (port 9999), f 13;
+#X text 80 770 ↗️;
+#N canvas 495 23 450 300 get-version 0;
 #X msg 40 110 l2ork_version;
 #X obj 40 135 pdinfo;
 #X obj 40 160 makefilename Pd-l2ork-%s;
 #X msg 40 185 label \$1;
-#X obj 40 80 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 40 80 bng 15 250 50 0 empty empty get\ PD\ version 17 7 0 10
+#fcfcfc #000000 #000000;
 #X obj 40 210 s \$0-version-text;
+#X obj 40 50 inlet;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 0;
 #X connect 4 0 0 0;
+#X connect 6 0 4 0;
+#X coords 0 -1 1 1 110 15 2 40 80;
 #X restore 40 290 pd get-version;
-#X obj 530 160 sketch002;
-#X obj 530 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 640 160 sketch002;
+#X obj 640 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X connect 7 0 9 0;
-#X connect 10 0 11 0;
-#X connect 10 1 11 1;
-#X connect 10 2 11 2;
-#X connect 10 3 11 3;
-#X connect 11 0 5 0;
-#X connect 11 1 5 1;
-#X connect 11 2 5 2;
-#X connect 11 3 5 3;
-#X connect 12 0 19 0;
-#X connect 13 0 12 0;
-#X connect 14 0 12 0;
-#X connect 15 0 14 0;
-#X connect 19 0 20 0;
-#X connect 19 1 22 0;
-#X connect 19 2 21 0;
-#X connect 19 3 23 0;
-#X connect 19 4 24 0;
-#X connect 19 5 25 0;
-#X connect 19 6 26 0;
-#X connect 27 0 13 0;
-#X connect 31 0 30 0;
-#X connect 51 0 50 0;
+#X obj 720 160 metavoice001;
+#X connect 10 0 12 0;
+#X connect 13 0 14 0;
+#X connect 13 1 14 1;
+#X connect 13 2 14 2;
+#X connect 13 3 14 3;
+#X connect 14 0 8 0;
+#X connect 14 1 8 1;
+#X connect 14 2 8 2;
+#X connect 14 3 8 3;
+#X connect 15 0 22 0;
+#X connect 16 0 15 0;
+#X connect 17 0 15 0;
+#X connect 18 0 17 0;
+#X connect 22 0 23 0;
+#X connect 22 1 25 0;
+#X connect 22 2 24 0;
+#X connect 22 3 26 0;
+#X connect 22 4 27 0;
+#X connect 22 5 28 0;
+#X connect 22 6 29 0;
+#X connect 30 0 16 0;
+#X connect 34 0 33 0;
+#X connect 54 0 53 0;

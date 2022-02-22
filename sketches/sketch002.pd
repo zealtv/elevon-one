@@ -2,17 +2,17 @@
 #N canvas 0 23 1440 855 12;
 #X obj -90 10 inlet;
 #X obj -90 40 switch~;
-#X obj 300 100 bop.rhythm;
-#A saved 8.375 5.1625 1 1 1\ 0\ 1\ 0\ 1\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#X obj 290 -160 bop.rhythm;
+#A saved 8.5 5.44345 1 1 1\ 0\ 1\ 0\ 1\ 0\ 1\ 0\ 1\ 0\ 1\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
-#X obj 500 330 route note;
+#X obj 490 70 route note;
 #X obj 500 370 select 1 2 3 4, f 68;
 #X obj 300 460 bop.rhythm;
-#A saved 16.375 1.72083 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 16.375 1.72083 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X msg 499 414 play 1;
 #X obj 562 468 bop.rhythm;
-#A saved 24 2.17738 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0
+#A saved 24 2.17738 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0
 ;
 #X msg 761 422 play 1;
 #X obj 838 472 bop.rhythm;
@@ -52,7 +52,7 @@
 #X obj -191 452 pack f f f;
 #X obj -190 490 route 1 2;
 #X obj 260 1580 bop.reverb;
-#A saved 1.01033 0.0815217 1.73913 0.292735 0.904736 0 0;
+#A saved 1.01033 0.0815217 1.73913 0.113092 0.904736 0 0;
 #X obj 500 2040 bop.synth;
 #A saved 0.0265407 0.695652 0.423913 0.706522 0 0.793478 0 1 0.308411
 0.0713281 0.01 0.353926 1 0.0122168 0.0670019;
@@ -63,7 +63,7 @@
 #X obj 500 2660 bop.send;
 #A saved master;
 #X obj 500 2550 bop.mix;
-#A saved 0 0.305988 0;
+#A saved 0 0.193376 0;
 #X obj -240 350 s \$0-ride;
 #X obj 880 1140 r \$0-ride;
 #X obj 550 1950 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -71,10 +71,10 @@
 #X obj 570 2000 list;
 #X obj 480 1950 t b l;
 #X obj 260 1280 bop.casio;
-#A saved 1.38859 3.69022 0.0652174 1 0.0597826 0.902174 0 0.369565
-0.798913 0.76087 1;
-#X obj 270 407 s \$0-chord;
-#X obj 680 310 r \$0-chord;
+#A saved 1.38859 3.69022 0.777174 1 0.0434783 0.902174 0 0.369565 0.798913
+0.76087 1;
+#X obj 490 120 s \$0-chord;
+#X obj 500 240 r \$0-chord;
 #X obj 770 1130 r \$0-chord;
 #X obj 570 1250 bop.notelist;
 #A saved c2\ g2\ d3 0;
@@ -83,7 +83,7 @@
 #X obj 840 1250 bop.notelist;
 #A saved a1\ a2\ b2 1.225;
 #X obj 1090 1250 bop.notelist;
-#A saved g1\ c2\ b2 1.25;
+#A saved g1\ c2\ b2\ d3 1.25;
 #X obj 1330 1250 bop.notelist;
 #A saved d2\ f#2\ g2 0;
 #X obj -110 80 bop.rhythm;
@@ -96,11 +96,11 @@
 #X obj 70 410 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
 #X obj 130 470 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 170 380 random 2;
-#X obj 260 1140 bop.notefx;
+#X obj 260 1170 bop.notefx;
 #A saved -0.439024 1.46341 0 0;
-#X obj 260 1010 bop.glok;
+#X obj 260 1100 bop.glok;
 #A saved 1;
 #X obj 310 910 unpack;
 #X obj 308 943 + 12;
@@ -133,6 +133,9 @@
 #000000 #000000;
 #X obj 1490 -310 random 6;
 #X obj 1500 -190 random 2;
+#X obj 520 1050 +;
+#X obj 362 962 t f b;
+#X obj 520 1000 random 30;
 #X connect 0 0 1 0;
 #X connect 2 3 3 0;
 #X connect 3 0 41 0;
@@ -232,7 +235,7 @@
 #X connect 59 2 58 2;
 #X connect 59 3 58 3;
 #X connect 60 0 61 0;
-#X connect 60 1 62 1;
+#X connect 60 1 85 0;
 #X connect 61 0 62 0;
 #X connect 62 0 59 2;
 #X connect 63 0 21 0;
@@ -263,3 +266,7 @@
 #X connect 81 0 82 0;
 #X connect 82 0 75 0;
 #X connect 83 0 78 0;
+#X connect 84 0 62 1;
+#X connect 85 0 84 0;
+#X connect 85 1 86 0;
+#X connect 86 0 84 1;
