@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1440 855 12;
+#N canvas 120 23 1440 855 12;
 #X obj -90 10 inlet;
 #X obj -90 40 switch~;
 #X obj 290 -160 bop.rhythm;
@@ -8,11 +8,11 @@
 #X obj 490 70 route note;
 #X obj 500 370 select 1 2 3 4, f 68;
 #X obj 300 460 bop.rhythm;
-#A saved 16.375 1.72083 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 16.375 1.72083 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X msg 499 414 play 1;
 #X obj 562 468 bop.rhythm;
-#A saved 24 2.17738 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0
+#A saved 24 2.17738 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0
 ;
 #X msg 761 422 play 1;
 #X obj 838 472 bop.rhythm;
@@ -57,7 +57,7 @@
 #A saved 0.0265407 0.695652 0.423913 0.706522 0 0.793478 0 1 0.308411
 0.0713281 0.01 0.353926 1 0.0122168 0.0670019;
 #X obj 260 1770 bop.notefx;
-#A saved 0 -1.2439 0 1;
+#A saved 0 -1.2439 0 0;
 #X obj 500 2400 bop.distortion;
 #A saved 0.695267 0.0637306 0.817065 1.53859 0.309783;
 #X obj 500 2660 bop.send;
@@ -108,7 +108,7 @@
 #X obj -350 930 bop.reverb;
 #A saved 0.424457 0.754076 1.75 0.104911 0.316228 0 0;
 #X obj 1510 190 bop.sampler;
-#A saved cayn02.wav 0.0224719 0.269663 0.45 0 0 5.9 47;
+#A saved cayn02.wav 0.0224719 0.269663 0.81 0 0 5.9 1;
 #X obj 1510 660 bop.send;
 #A saved master;
 #X obj 1510 470 bop.reverb;
@@ -136,6 +136,8 @@
 #X obj 520 1050 +;
 #X obj 362 962 t f b;
 #X obj 520 1000 random 30;
+#X obj -140 330 route note;
+#X obj -10 330 route note;
 #X connect 0 0 1 0;
 #X connect 2 3 3 0;
 #X connect 3 0 41 0;
@@ -163,7 +165,7 @@
 #X connect 19 2 17 0;
 #X connect 19 3 49 3;
 #X connect 20 3 35 0;
-#X connect 20 3 24 0;
+#X connect 20 3 87 0;
 #X connect 22 0 23 0;
 #X connect 22 1 23 1;
 #X connect 23 0 63 0;
@@ -217,7 +219,7 @@
 #X connect 47 2 29 2;
 #X connect 48 2 29 2;
 #X connect 49 2 29 2;
-#X connect 50 3 53 0;
+#X connect 50 3 88 0;
 #X connect 51 0 25 0;
 #X connect 52 0 56 0;
 #X connect 53 0 54 1;
@@ -270,3 +272,5 @@
 #X connect 85 0 84 0;
 #X connect 85 1 86 0;
 #X connect 86 0 84 1;
+#X connect 87 0 24 0;
+#X connect 88 0 53 0;
