@@ -23,7 +23,7 @@
 #A saved 110;
 #X obj 40 170 declare -path ./subpatches;
 #X obj 40 340 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 40 370 gyrosc2elevon;
 #X obj 600 360 bop.receive;
 #A saved master;
@@ -192,6 +192,9 @@ and are output from its bottom right outlet, f 35;
 #X obj 720 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X msg 742 321 amp 1;
+#X obj 560 220 sketch003;
+#X obj 560 190 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X connect 10 0 11 0;
 #X connect 12 0 13 0;
 #X connect 12 1 13 1;
@@ -217,3 +220,4 @@ and are output from its bottom right outlet, f 35;
 #X connect 53 0 52 0;
 #X connect 56 0 54 0;
 #X connect 57 0 12 3;
+#X connect 59 0 58 0;
