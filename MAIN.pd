@@ -23,12 +23,12 @@
 #A saved 110;
 #X obj 40 170 declare -path ./subpatches;
 #X obj 40 340 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 40 370 gyrosc2elevon;
 #X obj 600 360 bop.receive;
 #A saved master;
 #X obj 600 420 bop.mix;
-#A saved 0 0.778707 0;
+#A saved 0 1.00019 0;
 #X obj 300 430 lvn.hyperstave 7;
 #X msg 360 390 connect 0;
 #X msg 300 390 hue \$1;
@@ -191,6 +191,7 @@ and are output from its bottom right outlet, f 35;
 #X text 1610 1810 🐉;
 #X obj 720 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
+#X msg 742 321 amp 1;
 #X connect 10 0 11 0;
 #X connect 12 0 13 0;
 #X connect 12 1 13 1;
@@ -215,3 +216,4 @@ and are output from its bottom right outlet, f 35;
 #X connect 33 0 32 0;
 #X connect 53 0 52 0;
 #X connect 56 0 54 0;
+#X connect 57 0 12 3;
