@@ -16,11 +16,11 @@
 ;
 #X msg 2261 892 play 1;
 #X obj 2338 942 bop.rhythm;
-#A saved 24 2.42321 0 1 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 24 2.42321 0 0 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X msg 2537 896 play 1;
 #X obj 2640 940 bop.rhythm;
-#A saved 24 2.17738 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
+#A saved 24 2.17738 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
 ;
 #X msg 2840 902 play 1;
 #X obj 1800 1280 bop.notelist;
@@ -87,7 +87,7 @@
 #X obj 1230 1620 bop.reverb;
 #A saved 0.424457 0.754076 1.75 0.186562 0.60619 0 0;
 #X obj 3240 810 bop.sampler;
-#A saved cayn02.wav 0.0224719 0.269663 0.35 0 0 5.9 1;
+#A saved cayn02.wav 0.0224719 0.269663 0.5 0 0 5.9 1;
 #X obj 3240 1050 bop.reverb;
 #A saved 0.866848 0.441576 1.90217 0.048291 0.01 0 0;
 #X msg 3400 720 start-position \$1;
@@ -115,7 +115,7 @@
 #X obj 370 460 bop.send;
 #A saved master;
 #X obj 370 360 bop.mix;
-#A saved 0 1.23785 0;
+#A saved 0 0.750324 0;
 #X obj 1800 1400 bop.notefx;
 #A saved 0.56 0.651429 0 0 81.0976 89.5 1 39.1304 0;
 #X obj 730 1110 bop.sampler;
@@ -130,7 +130,7 @@
 #X obj 970 980 s \$0-kick;
 #X obj 2380 1590 r \$0-kick;
 #X obj 730 1340 bop.distortion;
-#A saved 0.589811 0.477912 0.13913 1.15652 0;
+#A saved 0.848179 0.713281 0.564185 0.454348 0;
 #X obj 1810 1570 bop.rhodes;
 #A saved 1;
 #X obj 1810 1830 bop.distortion;

@@ -22,7 +22,7 @@
 #A saved 0.822011 0.190217 1.69565 0.292735 0.177828 0 0;
 #X obj 340 700 bop.mix;
 #A saved 0 0.464395 -0.622047;
-#X obj 60 1000 bop.send;
+#X obj 100 340 bop.send;
 #A saved master;
 #X msg 670 110 note 6;
 #X msg 900 110 note 1;
@@ -34,8 +34,8 @@
 #000000;
 #X obj 340 190 bop.transform;
 #A saved noteslider 0 3 3.54628 1 0;
-#X obj 86 150 inlet;
-#X obj 90 190 switch~;
+#X obj 100 100 inlet;
+#X obj 100 130 switch~;
 #X obj 590 710 bop.casio;
 #A saved 4.35598 2.32065 0.94837 0.01 0.396739 0.902174 0.244565 0.777174
 0.434783 1 0;
@@ -78,9 +78,9 @@
 #A saved 0.505446 0.0252449 0.12837 1.54891 0;
 #X obj 340 1200 lvn.localsend~ submix-l;
 #X obj 410 1170 lvn.localsend~ submix-r;
-#X obj 60 790 lvn.localreceive~ submix-l;
-#X obj 100 830 lvn.localreceive~ submix-r;
-#X obj 60 890 bop.mix;
+#X obj 100 160 lvn.localreceive~ submix-l;
+#X obj 120 190 lvn.localreceive~ submix-r;
+#X obj 100 230 bop.mix;
 #A saved 0 0.984052 0;
 #X obj 590 1260 lvn.localsend~ submix-l;
 #X obj 650 1230 lvn.localsend~ submix-r;

@@ -1,0 +1,14 @@
+#N canvas 65 52 705 571 12;
+#X obj 100 330 bop.send;
+#A saved master;
+#X obj 100 100 inlet;
+#X obj 100 130 switch~;
+#X obj 100 160 lvn.localreceive~ submix-l;
+#X obj 120 190 lvn.localreceive~ submix-r;
+#X obj 100 230 bop.mix;
+#A saved 0 0.984052 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 1;
+#X connect 5 0 0 0;
+#X connect 5 1 0 1;

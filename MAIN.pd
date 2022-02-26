@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 735 23 945 1005 12;
+#N canvas 840 23 840 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -19,7 +19,7 @@
 #X obj 40 130 declare -path ./elevon;
 #X obj 40 150 declare -path ./bop;
 #X obj 40 400 lvn.telemetry;
-#X obj 600 520 bop;
+#X obj 600 530 bop;
 #A saved 110;
 #X obj 40 170 declare -path ./subpatches;
 #X obj 40 340 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -27,7 +27,7 @@
 #X obj 40 370 gyrosc2elevon;
 #X obj 600 360 bop.receive;
 #A saved master;
-#X obj 600 420 bop.mix;
+#X obj 600 430 bop.mix;
 #A saved 0 1.00019 0;
 #X obj 300 430 lvn.hyperstave 7;
 #X msg 360 390 connect 0;
@@ -160,8 +160,8 @@ and are output from its bottom right outlet, f 35;
 #X text 500 560 30;
 #X text 500 420 m/s;
 #X obj 40 230 declare -path ./templates;
-#X obj 300 130 metavoice;
-#X obj 300 160 stave-subpatch;
+#X obj 300 160 metavoice;
+#X obj 300 190 stave-subpatch;
 #X text 40 100 Libraries and Assets;
 #X text 300 100 Templates;
 #X text 560 100 Sketches;
@@ -195,6 +195,7 @@ and are output from its bottom right outlet, f 35;
 #X obj 560 220 sketch003;
 #X obj 560 190 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
+#X obj 300 130 sketch;
 #X connect 10 0 11 0;
 #X connect 12 0 13 0;
 #X connect 12 1 13 1;
