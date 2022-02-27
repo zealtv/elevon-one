@@ -1,12 +1,12 @@
 #N struct text float x float y text t;
-#N canvas 420 23 840 1005 12;
+#N canvas 840 23 840 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
 #X declare -path ./sketches;
 #X declare -path ./samples;
 #X declare -path ./templates;
-#X obj 40 740 cnv 15 120 100 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 40 740 cnv 15 120 180 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #X obj 560 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
@@ -29,7 +29,6 @@
 #X msg 360 390 connect 0;
 #X msg 300 390 hue \$1;
 #X text 60 770 X = forward;
-#X text 60 790 Y = right;
 #X text 60 810 Z = up;
 #X obj 300 600 route 0 1 2 3 4 5 6, f 20;
 #N canvas 178 23 1324 942 still 0;
@@ -65,7 +64,7 @@ spatial panning, f 64;
 #X text 710 560 useful for reusable generative algorithms;
 #X obj 430 890 switch~;
 #X obj 430 860 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X floatatom 540 870 5 0 0 0 - - -, f 5;
 #X text 458 768 ACTIVE;
 #X text 548 698 RELATIVEPOS;
@@ -207,6 +206,8 @@ and are output from its bottom right outlet, f 35;
 #X obj 13 26 inlet;
 #X obj 40 610 outlet;
 #X obj 40 570 clip 0 1;
+#X text 50 150 TODO: exponential scaling from still to moving, f 13
+;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 7 0;
@@ -233,6 +234,25 @@ and are output from its bottom right outlet, f 35;
 #X obj 40 320 telemetry;
 #X obj 300 300 r gs;
 #X text 90 750 📊;
+#X text 60 890 Z = up;
+#X text 60 850 X = north;
+#X text 60 870 Y = east;
+#X obj 300 850 r pitch;
+#X obj 440 851 r roll;
+#X obj 580 851 r yaw;
+#X floatatom 300 875 5 0 0 0 - - -, f 5;
+#X floatatom 440 876 5 0 0 0 - - -, f 5;
+#X floatatom 580 876 7 0 0 0 - - -, f 7;
+#X obj 300 899 hsl 128 15 -180 180 0 0 empty empty empty -2 -8 0 10
+#fcfcfc #000000 #000000 6027 1;
+#X obj 440 900 hsl 128 15 -180 180 0 0 empty empty empty -2 -8 0 10
+#fcfcfc #000000 #000000 6250 1;
+#X obj 580 900 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 12491 1;
+#X obj 370 850 r inv;
+#X obj 370 875 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X text 60 790 Y = right(?);
 #X connect 9 0 10 0;
 #X connect 9 1 10 1;
 #X connect 9 2 10 2;
@@ -241,21 +261,28 @@ and are output from its bottom right outlet, f 35;
 #X connect 10 1 7 1;
 #X connect 10 2 7 2;
 #X connect 10 3 7 3;
-#X connect 11 0 17 0;
+#X connect 11 0 16 0;
 #X connect 12 0 11 0;
 #X connect 13 0 11 0;
-#X connect 17 0 18 0;
-#X connect 17 1 20 0;
-#X connect 17 2 19 0;
-#X connect 17 3 21 0;
-#X connect 17 4 22 0;
-#X connect 17 5 23 0;
-#X connect 17 6 24 0;
-#X connect 25 0 12 0;
-#X connect 29 0 28 0;
-#X connect 47 0 46 0;
-#X connect 50 0 48 0;
-#X connect 51 0 9 3;
-#X connect 53 0 52 0;
-#X connect 55 0 13 0;
-#X connect 57 0 55 0;
+#X connect 16 0 17 0;
+#X connect 16 1 19 0;
+#X connect 16 2 18 0;
+#X connect 16 3 20 0;
+#X connect 16 4 21 0;
+#X connect 16 5 22 0;
+#X connect 16 6 23 0;
+#X connect 24 0 12 0;
+#X connect 28 0 27 0;
+#X connect 46 0 45 0;
+#X connect 49 0 47 0;
+#X connect 50 0 9 3;
+#X connect 52 0 51 0;
+#X connect 54 0 13 0;
+#X connect 56 0 54 0;
+#X connect 61 0 64 0;
+#X connect 62 0 65 0;
+#X connect 63 0 66 0;
+#X connect 64 0 67 0;
+#X connect 65 0 68 0;
+#X connect 66 0 69 0;
+#X connect 70 0 71 0;
