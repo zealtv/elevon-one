@@ -1,14 +1,14 @@
-#N canvas 0 23 1680 1005 10;
+#N canvas 840 23 840 1005 10;
 #X declare -lib cyclone;
-#X obj 15 15 cnv 15 100 357 empty empty empty 10 10 0 14 #c0c0c0 #fcfcfc
+#X obj 15 15 cnv 15 100 372 empty empty empty 10 10 0 14 #c0c0c0 #fcfcfc
 0;
-#X obj 18 160 cnv 15 30 49 empty \$0cvs4 empty 20 12 0 14 #99ffff #000000
+#X obj 18 160 cnv 15 30 65 empty \$0cvs4 empty 20 12 0 14 #99ffff #000000
 0;
 #X obj 18 114 cnv 15 30 48 empty \$0cvs3 empty 20 12 0 14 #99ffb2 #000000
 0;
 #X obj 18 18 cnv 15 30 32 empty \$0cvs1 empty 20 12 0 14 #ffe599 #000000
 0;
-#X obj 18 258 cnv 15 30 64 empty \$0cvs6 empty 20 12 0 14 #cc99ff #000000
+#X obj 19 274 cnv 15 30 64 empty \$0cvs6 empty 20 12 0 14 #cc99ff #000000
 0;
 #X obj 18 50 cnv 15 30 64 empty \$0cvs2 empty 20 12 0 14 #ccff99 #000000
 0;
@@ -38,38 +38,38 @@
 #X obj 250 288 t b f, f 6;
 #X obj 250 219 listfunnel;
 #X obj 330 11 declare -lib cyclone;
-#X floatatom 40 490 5 0 0 0 - - -, f 5;
-#X obj 40 550 / 8;
-#X obj 40 620 s, f 22;
-#X obj 40 520 t f f, f 21;
-#X obj 170 560 sprintf symbol \$0cvs%i;
+#X floatatom 40 590 5 0 0 0 - - -, f 5;
+#X obj 40 650 / 8;
+#X obj 40 720 s, f 22;
+#X obj 40 620 t f f, f 21;
+#X obj 170 660 sprintf symbol \$0cvs%i;
 #X floatatom 50 114 10 0 0 0 px px -, f 10;
 #X floatatom 50 130 10 0 0 0 py py -, f 10;
 #X floatatom 50 146 10 0 0 0 pz pz -, f 10;
 #X floatatom 50 162 10 0 0 0 vx vx -, f 10;
 #X floatatom 50 178 10 0 0 0 vy vy -, f 10;
 #X floatatom 50 194 10 0 0 0 vz vz -, f 10;
-#X obj 18 210 cnv 15 30 48 empty \$0cvs5 empty 20 12 0 14 #99b2ff #000000
+#X obj 19 226 cnv 15 30 48 empty \$0cvs5 empty 20 12 0 14 #99b2ff #000000
 0;
-#X floatatom 50 210 10 0 0 0 ax ax -, f 10;
-#X floatatom 50 226 10 0 0 0 ay ay -, f 10;
-#X floatatom 50 242 10 0 0 0 az az -, f 10;
-#X floatatom 50 393 10 0 0 0 qx qx -, f 10;
-#X floatatom 50 409 10 0 0 0 qy qy -, f 10;
-#X floatatom 50 425 10 0 0 0 qz qz -, f 10;
-#X floatatom 50 378 10 0 0 0 qw qw -, f 10;
-#X obj 18 321 cnv 15 30 48 empty \$0cvs7 empty 20 12 0 14 #ff99e5 #000000
+#X floatatom 51 226 10 0 0 0 ax ax -, f 10;
+#X floatatom 51 242 10 0 0 0 ay ay -, f 10;
+#X floatatom 51 258 10 0 0 0 az az -, f 10;
+#X floatatom 52 413 10 0 0 0 qx qx -, f 10;
+#X floatatom 52 429 10 0 0 0 qy qy -, f 10;
+#X floatatom 52 445 10 0 0 0 qz qz -, f 10;
+#X floatatom 52 398 10 0 0 0 qw qw -, f 10;
+#X obj 19 337 cnv 15 30 48 empty \$0cvs7 empty 20 12 0 14 #ff99e5 #000000
 0;
-#X floatatom 50 321 10 0 0 0 rvx rvx -, f 10;
-#X floatatom 50 337 10 0 0 0 rvy rvy -, f 10;
-#X floatatom 50 353 10 0 0 0 rvz rvz -, f 10;
-#X obj 40 581 sub.lvn.rainbowmaker;
+#X floatatom 51 337 10 0 0 0 rvx rvx -, f 10;
+#X floatatom 51 353 10 0 0 0 rvy rvy -, f 10;
+#X floatatom 51 369 10 0 0 0 rvz rvz -, f 10;
+#X obj 40 681 sub.lvn.rainbowmaker;
 #X msg 136 196 t sync px py pz lat lon alt qx qy qz qw h vx vy vz ax
 ay az rvx rvy rvz, f 17;
-#X floatatom 50 274 10 0 0 0 roll roll -, f 10;
-#X floatatom 50 290 10 0 0 0 yaw yaw -, f 10;
-#X floatatom 50 306 10 0 0 0 inv inv -, f 10;
-#X floatatom 50 259 10 0 0 0 pitch pitch -, f 10;
+#X floatatom 51 290 10 0 0 0 roll roll -, f 10;
+#X floatatom 51 306 10 0 0 0 yaw yaw -, f 10;
+#X floatatom 51 322 10 0 0 0 inv inv -, f 10;
+#X floatatom 51 275 10 0 0 0 pitch pitch -, f 10;
 #X obj 580 740 expr -1 * atan2( 2 * ($f1 * $f4 + $f2 * $f3) \, 1 -
 2 * ($f3 * $f3 + $f4 * $f4)), f 82;
 #X obj 580 710 r quat;
@@ -130,6 +130,17 @@ if not available as precomputed data point, f 25;
 #X obj 580 260 /;
 #X obj 610 220 * 2;
 #X obj 580 290 * 360;
+#X msg 420 160 \$14 \$15;
+#X obj 420 190 s \$0-vx-vy;
+#X obj 360 690 r \$0-vx-vy;
+#X floatatom 50 210 10 0 0 0 gs gs -, f 10;
+#X obj 360 830 s gs;
+#X text 360 670 calculate groundspeed;
+#X obj 360 720 unpack f f;
+#X obj 358 747 *;
+#X obj 410 745 *;
+#X obj 360 780 +;
+#X obj 360 805 sqrt;
 #X connect 7 0 8 0;
 #X connect 8 0 6 0;
 #X connect 8 1 6 1;
@@ -138,6 +149,7 @@ if not available as precomputed data point, f 25;
 #X connect 18 0 20 0;
 #X connect 19 0 29 0;
 #X connect 19 0 90 0;
+#X connect 19 0 112 0;
 #X connect 20 0 19 0;
 #X connect 21 0 17 0;
 #X connect 22 0 26 0;
@@ -197,4 +209,14 @@ if not available as precomputed data point, f 25;
 #X connect 109 0 111 0;
 #X connect 110 0 109 1;
 #X connect 111 0 96 0;
-#X coords 0 -1 1 1 106 363 2 12 12;
+#X connect 112 0 113 0;
+#X connect 114 0 118 0;
+#X connect 118 0 119 1;
+#X connect 118 0 119 0;
+#X connect 118 1 120 1;
+#X connect 118 1 120 0;
+#X connect 119 0 121 0;
+#X connect 120 0 121 1;
+#X connect 121 0 122 0;
+#X connect 122 0 116 0;
+#X coords 0 -1 1 1 106 378 2 12 12;
