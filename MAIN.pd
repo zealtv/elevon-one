@@ -6,27 +6,27 @@
 #X declare -path ./sketches;
 #X declare -path ./samples;
 #X declare -path ./templates;
-#X obj 560 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 400 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 300 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
+#X obj 1060 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0
+#404040 0;
 #X obj 40 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #X obj 40 270 cnv 15 240 15 empty \$0-version-text Pd-l2ork-2.17.0\ 20210829-rev.e47b7c65
 5 6 0 10 #e0e0e0 #404040 0;
 #X obj 40 130 declare -path ./elevon;
 #X obj 40 150 declare -path ./bop;
-#X obj 540 610 bop;
-#A saved 248;
+#X obj 400 800 bop;
+#A saved 88;
 #X obj 40 170 declare -path ./subpatches;
-#X obj 540 440 bop.receive;
+#X obj 400 640 bop.receive;
 #A saved master;
-#X obj 540 510 bop.mix;
+#X obj 400 700 bop.mix;
 #A saved 0 1.00019 0;
-#X obj 1320 470 lvn.hyperstave 7;
-#X msg 1380 430 connect 0;
-#X msg 1320 430 hue \$1;
-#X obj 1320 640 route 0 1 2 3 4 5 6, f 20;
+#X obj 800 530 lvn.hyperstave 7;
+#X msg 860 490 connect 0;
+#X msg 800 490 hue \$1;
+#X obj 800 700 route 0 1 2 3 4 5 6, f 20;
 #N canvas 178 23 1324 942 still 0;
 #X obj 90 160 inlet;
 #X obj 90 260 lvn.stave;
@@ -114,47 +114,47 @@ and are output from its bottom right outlet, f 35;
 #X connect 27 1 22 0;
 #X connect 29 0 1 1;
 #X connect 34 0 12 0;
-#X restore 1320 850 pd still;
+#X restore 800 910 pd still;
 #N canvas 615 23 450 300 walk 0;
 #X obj 148 167 inlet;
-#X restore 1360 790 pd walk;
+#X restore 840 850 pd walk;
 #N canvas 615 23 450 300 move 0;
 #X obj 148 167 inlet;
-#X restore 1340 820 pd move;
+#X restore 820 880 pd move;
 #N canvas 615 23 450 300 jog 0;
 #X obj 148 167 inlet;
-#X restore 1380 760 pd jog;
+#X restore 860 820 pd jog;
 #N canvas 615 23 450 300 sprint 0;
 #X obj 148 167 inlet;
-#X restore 1400 730 pd sprint;
+#X restore 880 790 pd sprint;
 #N canvas 615 23 450 300 cruise 0;
 #X obj 148 167 inlet;
-#X restore 1420 700 pd cruise;
+#X restore 900 760 pd cruise;
 #N canvas 615 23 450 300 speed 0;
 #X obj 148 167 inlet;
-#X restore 1440 670 pd speed;
-#X obj 1380 400 loadbang;
+#X restore 920 730 pd speed;
+#X obj 860 460 loadbang;
 #X obj 40 50 cnv 3 297 8 empty \$0cvs0 -=ELEVON-ONE=- 23 -3 0 30 #ff9999
 #000000 0;
 #X obj 40 210 declare -path ./sketches;
-#X obj 560 160 sketch001;
-#X obj 560 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 400 160 sketch001;
+#X obj 400 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 40 190 declare -path ./samples;
-#X text 1520 500 0.1;
-#X text 1520 480 0;
-#X text 1520 520 1;
-#X text 1520 540 2;
-#X text 1520 560 7;
-#X text 1520 580 15;
-#X text 1520 600 30;
-#X text 1520 460 m/s;
+#X text 1000 560 0.1;
+#X text 1000 540 0;
+#X text 1000 580 1;
+#X text 1000 600 2;
+#X text 1000 620 7;
+#X text 1000 640 15;
+#X text 1000 660 30;
+#X text 1000 520 m/s;
 #X obj 40 230 declare -path ./templates;
-#X obj 300 160 metavoice;
-#X obj 300 190 stave-subpatch;
+#X obj 1060 160 metavoice;
+#X obj 1060 190 stave-subpatch;
 #X text 40 100 Libraries and Assets;
-#X text 300 100 Templates;
-#X text 560 100 Sketches;
+#X text 1060 100 Templates;
+#X text 400 100 Sketches;
 #N canvas 495 23 450 300 get-version 0;
 #X msg 40 110 l2ork_version;
 #X obj 40 135 pdinfo;
@@ -172,18 +172,17 @@ and are output from its bottom right outlet, f 35;
 #X connect 6 0 4 0;
 #X coords 0 -1 1 1 110 15 2 40 80;
 #X restore 40 290 pd get-version;
-#X obj 640 160 sketch002;
-#X obj 640 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 400 220 sketch002;
+#X obj 400 190 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 720 160 metavoice001;
+#X obj 800 160 metavoice001;
 #X text 1610 1810 🐉;
-#X obj 720 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 800 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X msg 682 401 amp 1;
-#X obj 560 220 sketch003;
-#X obj 560 190 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 400 280 sketch003;
+#X obj 400 250 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 300 130 sketch;
+#X obj 1060 130 sketch;
 #N canvas 615 23 1008 772 map-groundspeed 0;
 #X obj 40 80 moses 0.1;
 #X obj 250 140 moses 1;
@@ -226,53 +225,38 @@ and are output from its bottom right outlet, f 35;
 #X connect 13 0 16 0;
 #X connect 14 0 0 0;
 #X connect 16 0 15 0;
-#X restore 1320 370 pd map-groundspeed;
+#X restore 800 430 pd map-groundspeed;
 #X obj 40 430 telemetry;
-#X obj 1320 340 r gs;
-#X obj 330 931 r pitch;
-#X obj 330 1011 r roll;
-#X obj 330 1090 r yaw;
-#X floatatom 330 956 5 0 0 0 - - -, f 5;
-#X floatatom 330 1036 5 0 0 0 - - -, f 5;
-#X floatatom 330 1115 7 0 0 0 - - -, f 7;
-#X obj 330 980 hsl 128 15 -180 180 0 0 empty empty empty -2 -8 0 10
-#fcfcfc #000000 #000000 0 1;
-#X obj 330 1060 hsl 128 15 -180 180 0 0 empty empty empty -2 -8 0 10
-#fcfcfc #000000 #000000 0 1;
-#X obj 330 1139 hsl 128 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X obj 400 931 r inv;
-#X obj 400 956 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X msg 780 550 bpm \$1;
-#X msg 950 400 167.5, f 7;
-#X msg 1020 400 88;
-#X msg 1160 480 110;
-#X floatatom 780 360 5 0 0 0 - - -, f 5;
-#X msg 780 390 \$1;
-#X msg 1060 400 55;
-#X text 1260 250 I have calculated velocity brackets that correlate
-to different human-scale velocities, f 41;
-#X text 70 340 The composition patch can receive live sensor data \,
-or playback a log of a previous session. Video recordings can be syncronished
-with data playback, f 41;
-#X text 600 270 At this stage of the composition process I have sketches
-that layer and all work at the same discrete tempos \, at the same
-time., f 47;
-#X text 960 160 Tempo will be mapped to velocity to approximate temporal
-musical events being evenly distributed in space., f 41;
-#X text 360 900 I will likely add orientation offsets.;
-#X text 830 660 Polytemporal superimposition is a key compositional
-feature.;
-#X msg 1060 370 walk;
-#X msg 1110 370 move;
-#X msg 1100 400 5;
-#X msg 1020 370 jog;
-#X msg 950 370 sprint;
-#X msg 880 370 cruise;
-#X msg 880 400 333, f 7;
-#X obj 820 400 int;
-#X obj 790 449 change;
+#X obj 800 400 r gs;
+#X msg 400 600 bpm \$1;
+#X msg 460 490 167.5, f 7;
+#X msg 520 490 88;
+#X floatatom 600 540 4 0 0 0 - - -, f 4;
+#X msg 600 570 \$1;
+#X msg 560 490 55;
+#X msg 560 460 walk;
+#X msg 600 460 move;
+#X msg 600 490 5;
+#X msg 520 460 jog;
+#X msg 460 460 sprint;
+#X msg 400 460 cruise;
+#X obj 800 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X text 800 100 Voices;
+#X msg 400 490 692.93;
+#X text 800 330 Velocity brackets are calculated to correlate to different
+human-scale velocities., f 35;
+#X text 1060 570 Tempos will be mapped to velocity to approximate temporal
+musical events being evenly distributed in space., f 35;
+#X msg 640 540 550.93;
+#X text 400 330 These sketches all work atop each other \, at the same
+discrete tempos \, at the same time., f 41;
+#X text 420 130 transition betweem brackets., f 37;
+#X text 420 190 From walk to sprint. Solo during sprint., f 41;
+#X text 420 250 From move to walk.;
+#X text 40 330 This patch can receive live sensor data \, or playback
+a log of a previous session. Video recordings can be syncronished with
+log playback., f 36;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
 #X connect 8 2 9 2;
@@ -295,30 +279,19 @@ feature.;
 #X connect 25 0 24 0;
 #X connect 43 0 42 0;
 #X connect 46 0 44 0;
-#X connect 47 0 8 3;
-#X connect 49 0 48 0;
-#X connect 51 0 12 0;
-#X connect 53 0 51 0;
-#X connect 54 0 57 0;
-#X connect 55 0 58 0;
-#X connect 56 0 59 0;
-#X connect 57 0 60 0;
-#X connect 58 0 61 0;
-#X connect 59 0 62 0;
-#X connect 63 0 64 0;
-#X connect 65 0 6 3;
-#X connect 66 0 65 0;
-#X connect 67 0 65 0;
-#X connect 68 0 65 0;
-#X connect 69 0 70 0;
-#X connect 70 0 85 0;
-#X connect 71 0 65 0;
-#X connect 78 0 71 0;
-#X connect 79 0 80 0;
-#X connect 80 0 65 0;
-#X connect 81 0 67 0;
-#X connect 82 0 66 0;
-#X connect 83 0 84 0;
-#X connect 84 0 65 0;
-#X connect 85 0 86 0;
-#X connect 86 0 65 0;
+#X connect 48 0 47 0;
+#X connect 50 0 12 0;
+#X connect 52 0 50 0;
+#X connect 53 0 8 3;
+#X connect 54 0 53 0;
+#X connect 55 0 53 0;
+#X connect 56 0 57 0;
+#X connect 57 0 53 0;
+#X connect 58 0 53 0;
+#X connect 59 0 58 0;
+#X connect 60 0 61 0;
+#X connect 61 0 53 0;
+#X connect 62 0 55 0;
+#X connect 63 0 54 0;
+#X connect 64 0 67 0;
+#X connect 67 0 53 0;
