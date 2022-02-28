@@ -21,3 +21,5 @@ The patch expects data in the following format to be sent as OSC to port 4813.
 ```
 
 Alternatively, a switch is provided to instead receive a subset of data from the iOS application [GyrOSC](https://www.bitshapesoftware.com/instruments/gyrosc/) on port 9999.  When using GyrOSC position and velocity data are not available.
+
+Samples from Cay Borthwick and Ian McCurdy.
