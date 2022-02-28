@@ -1,4 +1,4 @@
-#N canvas 18 71 1186 855 12;
+#N canvas 9 23 1662 957 12;
 #X obj 340 340 bop.noteslider;
 #A saved 5.58152 1 2.54128;
 #X obj 340 630 bop.rhodes;
@@ -17,7 +17,7 @@
 #X obj 340 40 bop.ramp;
 #A saved 1 5.9 noteslider -0.25 1 0;
 #X obj 340 450 bop.notefx;
-#A saved -0.231429 -1.42857 0 1 18.9024 103 1 51.087 0;
+#A saved -0.231429 -1.42857 0 0 18.9024 103 1 51.087 0;
 #X obj 340 810 bop.reverb;
 #A saved 0.822011 0.190217 1.69565 0.292735 0.177828 0 0;
 #X obj 340 700 bop.mix;
@@ -53,9 +53,9 @@
 #X obj 1790 610 bop.sampler;
 #A saved cayn01.wav 0 0 0 1 0 5.33018 1;
 #X obj 1790 850 bop.mix;
-#A saved 0 0.332614 -0.787402;
+#A saved 0 0.371807 -0.80315;
 #X obj 1300 1000 bop.reverb;
-#A saved 0.454348 0.3125 0.652174 0.0949172 0.33246 0 0;
+#A saved 0.801087 0.339674 0.652174 0.24569 0.653458 0 0;
 #X obj 2030 610 bop.sampler;
 #A saved cayn01.wav 0 0 0.167337 1 0 5.33018 1;
 #X obj 2030 850 bop.mix;
@@ -88,6 +88,11 @@
 #X obj 1370 1200 lvn.localsend~ submix-r;
 #X obj 1790 1080 lvn.localsend~ submix-l;
 #X obj 1860 1050 lvn.localsend~ submix-r;
+#X text 1300 480 These trigger on bpm changes.;
+#X text 1090 510 The initial dissonance is useful to disguise any harmonic
+changes;
+#X text 1040 400 This sketch is useful to transition betweentempo brackets
+because of is elastic termporal nature;
 #X connect 0 2 8 2;
 #X connect 1 0 10 0;
 #X connect 1 1 10 1;
