@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1680 1005 12;
+#N canvas 389 23 1291 1005 12;
 #X obj 330 50 inlet;
 #X obj 330 80 switch~;
 #X obj 2060 360 bop.rhythm;
@@ -39,7 +39,7 @@
 #X obj 660 1010 bop.sampler;
 #A saved ride-sizzle.wav 0.382022 0 0 1 0 4.2951 1;
 #X obj 760 1260 bop.mix;
-#A saved 0 0.156968 0.88189;
+#A saved 0 0.137294 0.629921;
 #X msg 780 820 60 127;
 #X obj 710 860 poly 2 1;
 #X obj 910 1010 bop.sampler;
@@ -52,11 +52,11 @@
 #A saved 0.0191694 0.695652 0.88587 0 0.61413 0.0326087 0 0 0.759337
 0.01 0.184631 0.808367 1 0.0177828 0.0102534;
 #X obj 2070 1850 bop.notefx;
-#A saved 0 -1.5 0 0 70.1219 73 1 35.3261 37.5;
+#A saved 0 -1.5 0 0 70.1219 73 1 35.3261 22.2826;
 #X obj 2070 2370 bop.distortion;
 #A saved 0.711086 0.0904736 0.817065 1.50761 0;
 #X obj 2070 2510 bop.mix;
-#A saved 0 0.305988 0;
+#A saved 0 0.334563 0;
 #X obj 670 770 s \$0-ride;
 #X obj 2600 1580 r \$0-ride;
 #X obj 2260 640 s \$0-chord;
@@ -82,12 +82,12 @@
 #X obj 970 850 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 1030 790 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 1030 720 random 2;
 #X obj 760 1600 bop.reverb;
-#A saved 0.424457 0.754076 1.75 0.186562 0.60619 0 0;
+#A saved 0.424457 0.754076 1.59783 0.315561 0.882373 0 0;
 #X obj 3240 810 bop.sampler;
-#A saved cayn02.wav 0.0224719 0.269663 0.73 0 0 5.9 1;
+#A saved cayn02.wav 0.0224719 0.269663 0.66 0 0 5.9 1;
 #X obj 3240 1050 bop.reverb;
 #A saved 0.866848 0.441576 1.90217 0.048291 0.01 0 0;
 #X msg 3400 720 start-position \$1;
@@ -117,7 +117,7 @@
 #X obj 330 210 bop.mix;
 #A saved 0 1.13876 0;
 #X obj 1800 1400 bop.notefx;
-#A saved 0.56 0.651429 0 0 81.0976 89.5 1 39.1304 0;
+#A saved 0.56 0.96 0 0 81.0976 89.5 1 39.1304 70.6522;
 #X obj 260 1090 bop.sampler;
 #A saved kick.wav 0 0 0 0 0 4.2951 1;
 #X obj 260 740 bop.rhythm;
@@ -157,17 +157,17 @@
 #X obj 1150 1010 bop.sampler;
 #A saved snare-tap-001.wav 0 0 0 0 0 4.2951 1;
 #X obj 1250 1260 bop.mix;
-#A saved 0 0.537405 -0.16378;
+#A saved 0 0.436225 -0.16378;
 #X obj 1400 1010 bop.sampler;
 #A saved snare-tap-002.wav 0 0 0 0 0 4.2951 1;
 #X obj 1410 820 poly 2 1;
 #X obj 1399 852 pack f f f;
 #X obj 1398 888 route 1 2;
 #X obj 1270 320 bop.rhythm;
-#A saved 16.3337 2.42321 1 1 0\ 0\ 1\ 0\ 1\ 0\ 0\ 1\ 0\ 1\ 0\ 1\ 1\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 16.3337 2.42321 1 1 0\ 0\ 1\ 0\ 1\ 0\ 0\ 1\ 0\ 1\ 0\ 1\ 1\ 0\ 1\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj 1270 640 bop.notefx;
-#A saved -0.582857 0.794286 0 0 88.4146 77.5 1 21.1957 21.1957;
+#A saved -0.582857 0.794286 0 0 88.4146 77.5 1 45.1087 21.1957;
 #X msg 1397 593 72 100;
 #X obj 1400 560 route note;
 #X connect 0 0 1 0;

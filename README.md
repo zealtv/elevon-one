@@ -25,6 +25,6 @@ Alternatively, a switch is provided to instead receive a subset of data from the
 
 ---
 
-Composition and Software Development by [Bob Jarvis](https://zeal.co).
+Composition and software development by [Bob Jarvis](https://zeal.co).
 
 Elevon-One uses samples from [Cayn Borthwick](https://caynborthwick.com/) and [Ian McCurdy](http://www.iainmccurdy.org/soundlibrary.html)[(CC-A2.0)](https://creativecommons.org/licenses/by/2.0/).	
