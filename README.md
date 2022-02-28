@@ -1,6 +1,12 @@
 # ELEVON-ONE 🛩
 
-Elevon-One is a spatial metacomposition writen in Pure Data, intended to musically a performers movement through space.  The composition exists as a Pure Data patch that receives live or prerecorded motion data, and leverages the Pure Data libraries [Bop 🐦](https://github.com/zealtv/bop), and [Elevon](https://github.com/zealtv/elevon) to render a musical result.
+Elevon-One is a *spatial metacomposition*:
+- a piece of music 
+- arranged in physical space 
+- (in such a way as to) 
+- musically respond to the movement of a solo-performer
+
+The composition exists as a Pure Data patch that receives live or prerecorded motion data, and leverages the [Bop 🐦](https://github.com/zealtv/bop) and [Elevon](https://github.com/zealtv/elevon) libraries to render a musical response.
 
 Elevon is responsible for hierarchically structuring the piece against n-dimensions of continuous data, whilst Bop provides musical content by way of synthesis, sequencing, sample playback, and audio processing.
 
