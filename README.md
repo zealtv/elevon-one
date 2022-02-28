@@ -2,11 +2,11 @@
 
 Elevon-One is a spatial metacomposition writen in Pure Data, intended to musically express the dynamics of gliding flight.  The patch receives motion data in the format specified below, and leverages the Pure Data libraries [Bop 🐦](https://github.com/zealtv/bop), and [Elevon](https://github.com/zealtv/elevon).
 
-Elevon is responsible for structuring the piece against n-dimensions of incoming data, whilst Bop provides musical content by way of synthesis, sequencing, sample playback, and audio processing.
+Elevon is responsible for hierarchically structuring the piece against n-dimensions of continuous data, whilst Bop provides musical content by way of synthesis, sequencing, sample playback, and audio processing.
 
 The patch expects data in the format specified below to be sent as OSC to port 4813.
 
-Alternatively, a switch is provided to instead receive a subset of data from the iOS application [GyrOSC](https://www.bitshapesoftware.com/instruments/gyrosc/) on port 9999.  When using GyrOSC position and velocity data are not available.
+Alternatively, a switch is provided to instead receive a subset of data from the iOS application [GyrOSC](https://www.bitshapesoftware.com/instruments/gyrosc/) on port 9999.  Position and velocity data are not available when using GyrOSC.
 
 
 ```
