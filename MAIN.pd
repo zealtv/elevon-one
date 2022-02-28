@@ -6,7 +6,7 @@
 #X declare -path ./sketches;
 #X declare -path ./samples;
 #X declare -path ./templates;
-#X obj 40 740 cnv 15 120 180 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 40 850 cnv 15 120 180 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
 #X obj 560 100 cnv 15 250 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
@@ -28,8 +28,8 @@
 #X obj 300 430 lvn.hyperstave 7;
 #X msg 360 390 connect 0;
 #X msg 300 390 hue \$1;
-#X text 60 770 X = forward;
-#X text 60 810 Z = up;
+#X text 60 870 X = forward;
+#X text 60 910 Z = up;
 #X obj 300 600 route 0 1 2 3 4 5 6, f 20;
 #N canvas 178 23 1324 942 still 0;
 #X obj 90 160 inlet;
@@ -233,10 +233,10 @@ and are output from its bottom right outlet, f 35;
 #X restore 300 330 pd map-groundspeed;
 #X obj 40 320 telemetry;
 #X obj 300 300 r gs;
-#X text 90 750 📊;
-#X text 60 890 Z = up;
-#X text 60 850 X = north;
-#X text 60 870 Y = east;
+#X text 90 940 📊;
+#X text 60 1000 Z = up;
+#X text 60 960 X = north;
+#X text 60 980 Y = east;
 #X obj 300 850 r pitch;
 #X obj 440 851 r roll;
 #X obj 580 851 r yaw;
@@ -252,7 +252,7 @@ and are output from its bottom right outlet, f 35;
 #X obj 370 850 r inv;
 #X obj 370 875 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X text 60 790 Y = right(?);
+#X text 60 890 Y = right(?);
 #X connect 9 0 10 0;
 #X connect 9 1 10 1;
 #X connect 9 2 10 2;

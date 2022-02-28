@@ -1,26 +1,26 @@
 #N canvas 5 23 962 1005 10;
 #X declare -lib cyclone;
-#X obj 10 10 cnv 15 120 410 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 10 10 cnv 15 120 520 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 20 162 cnv 15 30 65 empty \$0cvs4 empty 20 12 0 14 #99ffff #000000
+#X obj 20 302 cnv 15 30 65 empty \$0cvs4 empty 20 12 0 14 #99ffff #000000
 0;
-#X obj 20 116 cnv 15 30 48 empty \$0cvs3 empty 20 12 0 14 #99ffb2 #000000
+#X obj 20 256 cnv 15 30 48 empty \$0cvs3 empty 20 12 0 14 #99ffb2 #000000
 0;
-#X obj 20 20 cnv 15 30 32 empty \$0cvs1 empty 20 12 0 14 #ffe599 #000000
+#X obj 20 160 cnv 15 30 32 empty \$0cvs1 empty 20 12 0 14 #ffe599 #000000
 0;
-#X obj 21 276 cnv 15 30 64 empty \$0cvs6 empty 20 12 0 14 #cc99ff #000000
+#X obj 21 416 cnv 15 30 64 empty \$0cvs6 empty 20 12 0 14 #cc99ff #000000
 0;
-#X obj 20 52 cnv 15 30 64 empty \$0cvs2 empty 20 12 0 14 #ccff99 #000000
+#X obj 20 192 cnv 15 30 64 empty \$0cvs2 empty 20 12 0 14 #ccff99 #000000
 0;
 #X obj 300 536 send, f 10;
 #X obj 300 490 cyclone/zl rev;
 #X obj 300 513 unpack f s;
-#X floatatom 52 20 10 0 0 0 t t -, f 10;
-#X floatatom 52 36 10 0 0 0 sync sync -, f 10;
-#X floatatom 52 52 10 0 0 0 lat lat -, f 10;
-#X floatatom 52 68 10 0 0 0 lon lon -, f 10;
-#X floatatom 52 84 10 0 0 0 alt alt -, f 10;
-#X floatatom 52 100 10 0 0 0 h h -, f 10;
+#X floatatom 52 160 10 0 0 0 t t -, f 10;
+#X floatatom 52 176 10 0 0 0 sync sync -, f 10;
+#X floatatom 52 192 10 0 0 0 lat lat -, f 10;
+#X floatatom 52 208 10 0 0 0 lon lon -, f 10;
+#X floatatom 52 224 10 0 0 0 alt alt -, f 10;
+#X floatatom 52 240 10 0 0 0 h h -, f 10;
 #X obj 350 116 netreceive -u -b;
 #X msg 350 93 listen 4813;
 #X obj 300 190 oscparse;
@@ -36,44 +36,44 @@
 #X obj 300 398 t b f, f 6;
 #X obj 300 329 listfunnel;
 #X obj 500 20 declare -lib cyclone;
-#X floatatom 40 590 5 0 0 0 - - -, f 5;
-#X obj 40 650 / 8;
-#X obj 40 720 s, f 22;
-#X obj 40 620 t f f, f 21;
-#X obj 170 660 sprintf symbol \$0cvs%i;
-#X floatatom 52 116 10 0 0 0 px px -, f 10;
-#X floatatom 52 132 10 0 0 0 py py -, f 10;
-#X floatatom 52 148 10 0 0 0 pz pz -, f 10;
-#X floatatom 52 164 10 0 0 0 vx vx -, f 10;
-#X floatatom 52 180 10 0 0 0 vy vy -, f 10;
-#X floatatom 52 196 10 0 0 0 vz vz -, f 10;
-#X obj 21 228 cnv 15 30 48 empty \$0cvs5 empty 20 12 0 14 #99b2ff #000000
+#X floatatom 300 840 5 0 0 0 - - -, f 5;
+#X obj 300 900 / 8;
+#X obj 300 970 s, f 22;
+#X obj 300 870 t f f, f 21;
+#X obj 430 910 sprintf symbol \$0cvs%i;
+#X floatatom 52 256 10 0 0 0 px px -, f 10;
+#X floatatom 52 272 10 0 0 0 py py -, f 10;
+#X floatatom 52 288 10 0 0 0 pz pz -, f 10;
+#X floatatom 52 304 10 0 0 0 vx vx -, f 10;
+#X floatatom 52 320 10 0 0 0 vy vy -, f 10;
+#X floatatom 52 336 10 0 0 0 vz vz -, f 10;
+#X obj 21 368 cnv 15 30 48 empty \$0cvs5 empty 20 12 0 14 #99b2ff #000000
 0;
-#X floatatom 53 228 10 0 0 0 ax ax -, f 10;
-#X floatatom 53 244 10 0 0 0 ay ay -, f 10;
-#X floatatom 53 260 10 0 0 0 az az -, f 10;
-#X obj 21 339 cnv 15 30 48 empty \$0cvs7 empty 20 12 0 14 #ff99e5 #000000
+#X floatatom 53 368 10 0 0 0 ax ax -, f 10;
+#X floatatom 53 384 10 0 0 0 ay ay -, f 10;
+#X floatatom 53 400 10 0 0 0 az az -, f 10;
+#X obj 21 479 cnv 15 30 48 empty \$0cvs7 empty 20 12 0 14 #ff99e5 #000000
 0;
-#X floatatom 53 339 10 0 0 0 rvx rvx -, f 10;
-#X floatatom 53 355 10 0 0 0 rvy rvy -, f 10;
-#X floatatom 53 371 10 0 0 0 rvz rvz -, f 10;
-#X obj 40 681 sub.lvn.rainbowmaker;
+#X floatatom 53 479 10 0 0 0 rvx rvx -, f 10;
+#X floatatom 53 495 10 0 0 0 rvy rvy -, f 10;
+#X floatatom 53 511 10 0 0 0 rvz rvz -, f 10;
+#X obj 300 931 sub.lvn.rainbowmaker;
 #X msg 186 306 t sync px py pz lat lon alt qx qy qz qw h vx vy vz ax
 ay az rvx rvy rvz, f 17;
-#X floatatom 53 292 10 0 0 0 roll roll -, f 10;
-#X floatatom 53 308 10 0 0 0 yaw yaw -, f 10;
-#X floatatom 53 324 10 0 0 0 inv inv -, f 10;
-#X floatatom 53 277 10 0 0 0 pitch pitch -, f 10;
+#X floatatom 53 432 10 0 0 0 roll roll -, f 10;
+#X floatatom 53 448 10 0 0 0 yaw yaw -, f 10;
+#X floatatom 53 464 10 0 0 0 inv inv -, f 10;
+#X floatatom 53 417 10 0 0 0 pitch pitch -, f 10;
 #X msg 600 370 \$9 \$10 \$11 \$12;
-#X msg 360 680 \$14 \$15;
-#X floatatom 52 212 10 0 0 0 gs gs -, f 10;
-#X obj 360 830 s gs;
-#X text 360 630 calculate groundspeed;
-#X obj 360 720 unpack f f;
-#X obj 358 747 *;
-#X obj 410 745 *;
-#X obj 360 780 +;
-#X obj 360 805 sqrt;
+#X msg 930 360 \$14 \$15;
+#X floatatom 52 352 10 0 0 0 gs gs -, f 10;
+#X obj 930 510 s gs;
+#X text 930 310 calculate groundspeed;
+#X obj 930 400 unpack f f;
+#X obj 928 427 *;
+#X obj 980 425 *;
+#X obj 930 460 +;
+#X obj 930 485 sqrt;
 #N canvas 794 23 886 1005 quat2euler-telemosc 0;
 #X obj 400 300 expr -1 * atan2( 2 * ($f1 * $f4 + $f2 * $f3) \, 1 -
 2 * ($f3 * $f3 + $f4 * $f4)), f 82;
@@ -285,29 +285,38 @@ if not available as precomputed data point, f 25;
 #X connect 47 0 44 0;
 #X restore 758 402 pd quat2euler-gyrosc;
 #X obj 310 270 s \$0-telem-raw;
-#X obj 360 650 r \$0-telem-raw;
+#X obj 930 330 r \$0-telem-raw;
 #X obj 600 340 r \$0-telem-raw;
-#X obj 20 400 tgl 15 1 \$0-gyrosc empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#X obj 20 130 tgl 15 1 \$0-gyrosc empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 760 370 gyrosc2elevon;
-#X text 40 390 enable gyrOSC (port 9999), f 13;
+#X text 40 120 enable gyrOSC (port 9999), f 13;
 #X obj 300 160 gate;
 #X obj 760 340 r \$0-gyrosc;
 #X obj 300 20 r \$0-gyrosc;
 #X obj 300 110 -;
 #X obj 300 70 t 1 f;
-#X text 810 820 0 is level \; -90 is roll left \; 90 is roll right
+#X text 780 710 0 is level \; -90 is roll left \; 90 is roll right
 \; returns to 0 when inverted;
-#X text 630 790 GYROSC;
-#X text 630 820 0 is level \; 90 is up \; 180/-180 is inverted
+#X text 600 680 GYROSC;
+#X text 600 710 0 is level \; 90 is up \; 180/-180 is inverted
 level \; -90 is down \;  \; 90 to 180 \, and -180 to -90 is
 inverted, f 26;
-#X text 630 690 0 is level \; -90 is roll left \; 90 is roll right
+#X text 600 580 0 is level \; -90 is roll left \; 90 is roll right
 \; returns to 0 when inverted;
-#X text 800 690 0 is level \; 90 is up \; 180/-180 is inverted
+#X text 770 580 0 is level \; 90 is up \; 180/-180 is inverted
 level \; -90 is down \;  \; 90 to 180 \, and -180 to -90 is
 inverted, f 26;
-#X text 630 660 TELEMOSC;
+#X text 600 550 TELEMOSC;
+#X obj 440 270 r /telemetry;
+#X obj 20 20 data-playback;
+#X obj 529 174 bz/set;
+#X msg 529 199 169254 0 0 0 0 0 0 17.073 0.0298555 0.0117634 -0.367308
+-0.929546 46.32 0 0 0 -0.225553 -0.833565 9.67916 -0.0927193 -0.112059
+-0.0913346;
+#X obj 530 140 r /telemetry;
+#X text 600 520 ----PITCH----;
+#X text 770 520 ----ROLL----;
 #X connect 7 0 8 0;
 #X connect 8 0 6 0;
 #X connect 8 1 6 1;
@@ -360,4 +369,7 @@ inverted, f 26;
 #X connect 79 0 76 0;
 #X connect 80 0 79 0;
 #X connect 80 1 79 1;
-#X coords 0 -1 1 1 120 410 2 10 10;
+#X connect 87 0 28 0;
+#X connect 89 0 90 0;
+#X connect 91 0 89 0;
+#X coords 0 -1 1 1 120 520 2 10 10;
