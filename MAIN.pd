@@ -19,7 +19,7 @@
 #X obj 100 1530 declare -path ./elevon;
 #X obj 100 1550 declare -path ./bop;
 #X obj 900 660 bop;
-#A saved 55;
+#A saved 59;
 #X obj 100 1570 declare -path ./subpatches;
 #X obj 900 500 bop.receive;
 #A saved master;
@@ -38,7 +38,7 @@
 #X msg 280 100 button \$1;
 #X msg 300 160 playhead \$1;
 #X obj 430 790 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 510 720 5 0 0 0 - - -, f 5;
 #X floatatom 588 638 5 0 0 0 - - -, f 5;
 #X msg 670 560 0 0;
@@ -62,7 +62,7 @@ spatial panning, f 64;
 #X text 710 560 useful for reusable generative algorithms;
 #X obj 430 890 switch~;
 #X obj 430 860 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 540 870 5 0 0 0 - - -, f 5;
 #X text 458 768 ACTIVE;
 #X text 548 698 RELATIVEPOS;
@@ -95,6 +95,8 @@ and are output from its bottom right outlet, f 35;
 #X obj 270 310 lvn.localsend stave-info;
 #X text 90 100 communicates with parent hyperstave, f 16;
 #X text 100 330 communicates with child hyperstave, f 16;
+#X text 680 290 AT SLOW SPEEDS - groundspeed should be directly tied
+to bpm;
 #X connect 0 0 1 0;
 #X connect 1 0 13 0;
 #X connect 1 1 35 0;
@@ -141,7 +143,7 @@ and are output from its bottom right outlet, f 35;
 #X obj 100 1610 declare -path ./sketches;
 #X obj 910 1000 sketch001;
 #X obj 910 970 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 100 1590 declare -path ./samples;
 #X text 720 530 0.1;
 #X text 720 510 0;
@@ -228,7 +230,7 @@ and are output from its bottom right outlet, f 35;
 #X connect 15 0 14 0;
 #X connect 17 0 0 0;
 #X restore 520 400 pd map-groundspeed;
-#X obj 100 380 telemetry;
+#X obj 100 440 telemetry;
 #X msg 1060 470 bpm \$1;
 #X msg 960 430 167.5, f 7;
 #X msg 1020 430 88;
@@ -243,13 +245,13 @@ and are output from its bottom right outlet, f 35;
 #X msg 900 400 cruise;
 #X text 650 940 Voices;
 #X msg 900 430 692.93;
-#X text 100 290 This patch can receive live sensor data \, or playback
+#X text 100 350 This patch can receive live sensor data \, or playback
 a log of a previous session. Video recordings can be syncronished with
 log playback., f 38;
 #X text 70 90 Elevon-One is a spatial metacomposition: a piece of music
 arranged in physical space (in such a way as to) musically respond
 to the movement of a solo-performer., f 48;
-#X text 100 180 The composition exists as a Pure Data patch that receives
+#X text 100 240 The composition exists as a Pure Data patch that receives
 live or prerecorded motion data \, and leverages the *Bop* and *Elevon*
 libraries to render a musical response., f 38;
 #X text 490 110 Elevon is responsible for hierarchically arranging
@@ -273,19 +275,20 @@ spectrum)., f 42;
 #X text 640 310 By mapping discrete tempos to velocity brackets \,
 musical events are distributed approximately evenly in space. [This
 needs a diagram], f 57;
-#X obj 100 970 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#X obj 100 1030 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 24800 1;
+#X obj 100 1080 s h;
+#X floatatom 100 1050 14 0 0 0 - - -, f 14;
+#X obj 100 1000 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0
+#404040 0;
+#X text 100 1000 Manual Control;
+#X obj 100 1120 hsl 260 15 0 60 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 100 1020 s h;
-#X floatatom 100 990 14 0 0 0 - - -, f 14;
-#X obj 100 940 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
-#X text 100 940 Manual Control;
-#X obj 100 1060 hsl 260 15 0 60 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
-#X floatatom 100 1080 14 0 0 0 - - -, f 14;
-#X obj 100 1110 s gs;
-#X text 300 990 Heading;
-#X text 280 1080 Ground speed;
+#X floatatom 100 1140 14 0 0 0 - - -, f 14;
+#X obj 100 1170 s gs;
+#X text 300 1050 Heading;
+#X text 280 1140 Ground speed;
+#X text 100 180 Listen loudly and in the background., f 38;
 #X connect 9 0 10 0;
 #X connect 9 1 10 1;
 #X connect 9 2 10 2;

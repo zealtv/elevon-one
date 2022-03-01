@@ -12,7 +12,7 @@
 ;
 #X msg 1999 884 play 1;
 #X obj 2062 938 bop.rhythm;
-#A saved 24 2.17738 0 1 1\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0
+#A saved 24 2.17738 0 0 1\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0
 ;
 #X msg 2261 892 play 1;
 #X obj 2338 942 bop.rhythm;
@@ -20,7 +20,7 @@
 ;
 #X msg 2537 896 play 1;
 #X obj 2640 940 bop.rhythm;
-#A saved 24 2.17738 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
+#A saved 24 2.17738 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
 ;
 #X msg 2840 902 play 1;
 #X obj 1800 1280 bop.notelist;
@@ -37,22 +37,22 @@
 #A saved 24 2.35298 1 1 1\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 1\ 1\ 0\ 0\ 1\ 0\ 0\ 0\ 1\ 0\ 1\ 0\ 1
 ;
 #X obj 660 1010 bop.sampler;
-#A saved ride-sizzle.wav 0.224719 -8.89888 0 1 0 1.50036 1;
-#X obj 750 1260 bop.mix;
-#A saved 0 2 -0.574803;
+#A saved ride-sizzle.wav 0.224719 -8.89888 0 1 0 2.94948 1;
+#X obj 730 1270 bop.mix;
+#A saved 0 0.798779 -0.661417;
 #X msg 780 820 60 127;
 #X obj 710 860 poly 2 1;
 #X obj 910 1010 bop.sampler;
-#A saved ride-sizzle.wav 0 -3.50562 0 1 0 4.08808 1;
+#A saved ride-sizzle.wav 0 -3.50562 0 1 0 4.03632 1;
 #X obj 699 892 pack f f f;
 #X obj 840 940 route 1 2;
 #X obj 1810 1650 bop.reverb;
-#A saved 0.968478 0.0815217 1.21739 0.145254 0.740568 1 0;
-#X obj 2070 2020 bop.synth;
-#A saved 0.01 0.478261 0.233696 0 0 0.0326087 0.293478 0 0.14556 0.0882373
-0.01 0.670019 0 0.0191694 0.0300788;
+#A saved 0.968478 0.0815217 1.21739 0.145254 0.740568 0 0;
+#X obj 2050 2020 bop.synth;
+#A saved 0.01 0.440217 0.233696 0 0 0.0326087 0.293478 1 0.460303 0.0778582
+0.01 0.670019 0 0.0798314 0.048393;
 #X obj 2070 1850 bop.notefx;
-#A saved 0 -0.214286 0 0 39.6341 100 1 48.913 0;
+#A saved 0 1.21429 0 0 39.6341 100 1 48.913 0;
 #X obj 2070 2490 bop.mix;
 #A saved 0 0.503334 0;
 #X obj 670 770 s \$0-ride;
@@ -82,10 +82,10 @@
 #X obj 1030 790 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 1030 720 random 2;
-#X obj 730 1450 bop.reverb;
-#A saved 0.902717 0.197011 1.88587 0.45362 0.818547 0 0;
+#X obj 690 1460 bop.reverb;
+#A saved 0.364674 0.733696 0.603261 0.188911 1 1 0;
 #X obj 3240 810 bop.sampler;
-#A saved cayn02.wav 0.00247191 0.269663 0.39 0 0 1.34561 1;
+#A saved cayn02.wav 0.00247191 0.269663 0.73 0 0 1.34561 1;
 #X obj 3240 1050 bop.reverb;
 #A saved 0.854891 0.353261 0.923913 0.227919 0.562341 0 0;
 #X msg 3400 720 start-position \$1;
@@ -113,7 +113,7 @@
 #X obj 330 310 bop.send;
 #A saved master;
 #X obj 330 210 bop.mix;
-#A saved 0 0.609056 0;
+#A saved 0 0.494385 0;
 #X obj 1800 1400 bop.notefx;
 #A saved 0.56 2.67429 0 0 63.4146 91 1 39.1304 44.5652;
 #X obj 260 1090 bop.sampler;
@@ -167,9 +167,9 @@
 #X obj 1270 640 bop.notefx;
 #A saved -0.582857 -2.77714 0 0 90.2439 106 1 74.4565 0.543478;
 #X obj 720 2000 bop.distortion;
-#A saved 0.900908 0.778582 0.389321 0.784783 1;
+#A saved 0.879816 0.778582 0.62606 0.784783 0.684783;
 #X obj 740 2330 bop.mix;
-#A saved 0 0.415617 0;
+#A saved 0 0.512017 0;
 #X obj 1270 520 bop.notelist;
 #A saved c4\ d3\ g4\ b5 0;
 #X msg 1289 467 notelist c4 d3 g4 b5;
@@ -177,7 +177,7 @@
 #X obj 1009 1407 > 1;
 #X obj 1009 1447 sel 1;
 #X obj 984 1503 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 979 1457 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 1009 1477 random 2;
@@ -186,25 +186,25 @@
 #A saved 0 0.635003 0.283465;
 #X text 3160 2920 test;
 #X obj 720 1660 bop.mix;
-#A saved 0 0.1301 -0.393701;
+#A saved 0 0.312438 -0.251969;
 #X text 940 1840 This item should be pointed somewhere to draw you
 to it;
 #X msg 1637 1598 freeze \$1;
 #X obj 1640 1530 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 3020 820 bop.sampler;
 #A saved cayn01.wav 1 0.269663 0.48 0 0 1.34561 1;
 #X obj 2990 1360 bop.mix;
 #A saved 0 0.189621 0.755906;
 #X obj 730 2140 bop.reverb;
-#A saved 0.92663 0.197011 1.91304 0.0635963 0.927665 0 0;
+#A saved 0.92663 0.197011 1.91304 0.148935 0.927665 0 0;
 #X obj 2300 1850 bop.notefx;
-#A saved 0 -1.21429 0 0 57.9268 94 1 51.087 35.8696;
+#A saved 0 -1.21429 0 0 57.9268 118 1 59.2391 35.8696;
 #X obj 2314 2391 bop.distortion;
-#A saved 0.879816 0.0621553 1 1.62636 0.179348;
-#X obj 2570 2030 bop.glok;
+#A saved 0.73745 0.11053 0.99462 1.62636 0;
+#X obj 2570 2020 bop.glok;
 #A saved 1;
-#X obj 2560 1860 bop.notefx;
+#X obj 2560 1850 bop.notefx;
 #A saved 0 2.07143 0 0 89.6341 107.5 1 16.8478 0;
 #X msg 1888 1188 notelist c2\ g2\ d3;
 #X msg 2038 1188 notelist a1\ a2\ b2;
