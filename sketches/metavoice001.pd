@@ -9,7 +9,7 @@
 #X obj 100 150 lvn.stave;
 #X connect 0 0 1 0;
 #X restore 140 560 pd up;
-#N canvas 949 23 1440 855 level 1;
+#N canvas 240 23 1440 855 level 1;
 #X obj 100 100 inlet;
 #X obj 100 300 lvn.hyperstave 4;
 #X obj 100 420 route 0 1 2 3, f 77;
@@ -22,7 +22,7 @@
 #X msg 300 -10 button \$1;
 #X msg 320 50 playhead \$1;
 #X obj 730 400 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 810 330 5 0 0 0 - - -, f 5;
 #X floatatom 888 248 5 0 0 0 - - -, f 5;
 #X msg 970 170 0 1 0;
@@ -43,7 +43,7 @@ spatial panning, f 64;
 #X text 1010 170 useful for reusable generative algorithms;
 #X obj 730 500 switch~;
 #X obj 730 470 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 840 480 5 0 0 0 - - -, f 5;
 #X text 758 378 ACTIVE;
 #X text 848 308 RELATIVEPOS;
@@ -425,7 +425,7 @@ and are output from its bottom right outlet, f 35;
 #X msg 327 151 button \$1;
 #X msg 347 211 playhead \$1;
 #X obj 757 561 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 837 491 5 0 0 0 - - -, f 5;
 #X floatatom 915 409 5 0 0 0 - - -, f 5;
 #X msg 997 331 0 1 3;
@@ -446,7 +446,7 @@ spatial panning, f 64;
 #X text 1037 331 useful for reusable generative algorithms;
 #X obj 757 661 switch~;
 #X obj 757 631 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 867 641 5 0 0 0 - - -, f 5;
 #X text 785 539 ACTIVE;
 #X text 875 469 RELATIVEPOS;

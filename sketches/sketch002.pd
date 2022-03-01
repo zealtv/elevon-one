@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1680 1005 12;
+#N canvas 0 23 840 1005 12;
 #X obj 330 50 inlet;
 #X obj 330 80 switch~;
 #X obj 2060 360 bop.rhythm;
@@ -20,7 +20,7 @@
 ;
 #X msg 2537 896 play 1;
 #X obj 2640 940 bop.rhythm;
-#A saved 24 2.17738 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
+#A saved 24 2.17738 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
 ;
 #X msg 2840 902 play 1;
 #X obj 1800 1280 bop.notelist;
@@ -83,7 +83,7 @@
 #000000 0 1;
 #X obj 1030 720 random 2;
 #X obj 690 1460 bop.reverb;
-#A saved 0.364674 0.733696 0.603261 0.188911 1 1 0;
+#A saved 0.364674 0.733696 0.603261 0.188911 1 0 0;
 #X obj 3240 810 bop.sampler;
 #A saved cayn02.wav 0.00247191 0.269663 0.73 0 0 1.34561 1;
 #X obj 3240 1050 bop.reverb;
@@ -177,7 +177,7 @@
 #X obj 1009 1407 > 1;
 #X obj 1009 1447 sel 1;
 #X obj 984 1503 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 979 1457 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 1009 1477 random 2;
