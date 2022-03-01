@@ -1,4 +1,4 @@
-#N canvas 240 23 1431 627 12;
+#N canvas 240 23 1431 995 12;
 #X obj 340 340 bop.noteslider;
 #A saved 5.58152 1 2.54128;
 #X obj 340 630 bop.rhodes;
@@ -9,7 +9,7 @@
 #A saved 0 0.185475 0;
 #X obj 590 360 bop.synth;
 #A saved 0.0951176 0.782609 0.228261 0.961957 0.0163043 0.532609 0.793478
-1 0.0316228 0.0591206 0.135031 1 0 0.196552 0.0376779;
+1 0.0316228 0.0591206 0.135031 1 0 0.196552 0.316228;
 #X obj 590 150 bop.euclidean;
 #A saved 8.34783 4.56522 0.26087 4 4.14405 11 3.8715 1 1 127;
 #X obj 810 150 bop.euclidean;
@@ -88,11 +88,11 @@
 #X obj 1370 1200 lvn.localsend~ submix-r;
 #X obj 1790 1080 lvn.localsend~ submix-l;
 #X obj 1860 1050 lvn.localsend~ submix-r;
-#X text 1300 480 These trigger on bpm changes.;
-#X text 1090 510 The initial dissonance is useful to disguise any harmonic
-changes;
 #X text 1040 400 This sketch is useful to transition betweentempo brackets
 because of is elastic termporal nature;
+#X text 1090 490 These samplers retrigger on bpm changes.;
+#X text 1090 510 The initial dissonance is useful to disguise any harmonic
+changes between tempos.;
 #X connect 0 2 8 2;
 #X connect 1 0 10 0;
 #X connect 1 1 10 1;

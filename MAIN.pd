@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 840 23 840 1005 12;
+#N canvas 0 23 1680 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -18,12 +18,12 @@
 5 6 0 10 #e0e0e0 #404040 0;
 #X obj 100 1530 declare -path ./elevon;
 #X obj 100 1550 declare -path ./bop;
-#X obj 920 700 bop;
-#A saved 88;
+#X obj 900 660 bop;
+#A saved 55;
 #X obj 100 1570 declare -path ./subpatches;
-#X obj 920 540 bop.receive;
+#X obj 900 500 bop.receive;
 #A saved master;
-#X obj 920 600 bop.mix;
+#X obj 900 560 bop.mix;
 #A saved 0 1.00019 0;
 #X obj 520 500 lvn.hyperstave 7;
 #X msg 580 460 connect 0;
@@ -229,20 +229,20 @@ and are output from its bottom right outlet, f 35;
 #X connect 17 0 0 0;
 #X restore 520 400 pd map-groundspeed;
 #X obj 100 380 telemetry;
-#X msg 1120 500 bpm \$1;
-#X msg 940 460 167.5, f 7;
-#X msg 1000 460 88;
-#X floatatom 1120 430 7 0 0 0 - - -, f 7;
-#X msg 1120 460 \$1;
-#X msg 1040 460 55;
-#X msg 1040 430 walk;
-#X msg 1080 430 move;
-#X msg 1080 460 5;
-#X msg 1000 430 jog;
-#X msg 940 430 sprint;
-#X msg 880 430 cruise;
+#X msg 1060 470 bpm \$1;
+#X msg 960 430 167.5, f 7;
+#X msg 1020 430 88;
+#X floatatom 1140 400 7 0 0 0 - - -, f 7;
+#X msg 1140 430 \$1;
+#X msg 1060 430 55;
+#X msg 1060 400 walk;
+#X msg 1100 400 move;
+#X msg 1100 430 5;
+#X msg 1020 400 jog;
+#X msg 960 400 sprint;
+#X msg 900 400 cruise;
 #X text 650 940 Voices;
-#X msg 880 460 692.93;
+#X msg 900 430 692.93;
 #X text 100 290 This patch can receive live sensor data \, or playback
 a log of a previous session. Video recordings can be syncronished with
 log playback., f 38;
@@ -274,7 +274,7 @@ spectrum)., f 42;
 musical events are distributed approximately evenly in space. [This
 needs a diagram], f 57;
 #X obj 100 970 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 650 1;
+#000000 #000000 0 1;
 #X obj 100 1020 s h;
 #X floatatom 100 990 14 0 0 0 - - -, f 14;
 #X obj 100 940 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
