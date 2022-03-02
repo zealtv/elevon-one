@@ -15,16 +15,16 @@
 #X obj 580 100 bop.euclidean;
 #A saved 4.17391 2.21739 0.26087 8 2.95 5.89286 4.87381 1 1 127;
 #X msg 1574 451 play \$1;
-#X obj 1146 395 bop.marimba;
+#X obj 1150 400 bop.marimba;
 #A saved 1;
 #X obj 1146 585 bop \$0;
-#A saved 90;
+#A saved 164;
 #X msg 1292 343 60 127, f 8;
 #X obj 1344 86 bop.rhythm 99;
-#A saved 2.25 2.87976 1 1 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 2.25 2.87976 1 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj 1381 585 bop 99;
-#A saved 60;
+#A saved 143;
 #X msg 1483 342 36 100;
 #X obj 1345 488 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -40,7 +40,7 @@
 #X text 1592 58 Global anonymous;
 #X text 1344 52 Global numbered;
 #X obj 1080 100 bop.rhythm \$0;
-#A saved 18.25 1.33452 1 1 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 12.125 1.33452 1 1 1\ 0\ 1\ 0\ 1\ 0\ 0\ 1\ 0\ 1\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj 913 563 r bop-time;
 #X obj 913 406 loadbang;
@@ -55,36 +55,36 @@
 #A saved 1 5.9 symbol -0.25 1 0;
 #X obj 1060 750 bop.palette;
 #X obj 340 100 bop.casio;
-#A saved 0 0 0 0 0 0 0 0 0 0 0;
+#A saved 0 0 0 0.01 0 0 0 0 0 0 0;
 #X obj 340 380 bop.harp;
 #A saved 0;
 #X obj 100 100 bop.synth;
-#A saved 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
+#A saved 0.01 0 0 0 0 0 0 0 0.01 0.01 0.01 0.01 0 0.01 0.01;
 #X obj 340 450 bop.rhodes;
 #A saved 0;
 #X obj 340 520 bop.glok;
 #A saved 0;
-#X obj 340 590 bop.mix;
-#A saved 0 0 0;
 #X obj 580 490 bop.distortion;
-#A saved 0 0 0 0 0;
+#A saved 0.0098 0.01 0.01 0 0;
 #X obj 340 700 bop.reverb;
-#A saved 0 0 0 0 0 0 0;
+#A saved 0 0 0 0.0125 0.01 0 0;
 #X obj 340 880 bop.filter;
-#A saved 0 0 0;
+#A saved 20 1 0;
 #X obj 580 640 bop.notelist;
-#A saved  0;
+#A saved c4\ e4\ g4\ b5 0;
 #X obj 580 740 bop.notefx;
-#A saved 0 0 0 0 0 0 0 0 0;
+#A saved 0 0 0 0 0 1 1 0 0;
 #X obj 820 700 bop.dancer;
 #X obj 820 790 bop.ramp;
-#A saved 0 0 symbol 0 0 0;
+#A saved 1 0 symbol 0 0 0;
 #X obj 820 940 bop.transform;
-#A saved  0 0 0 0 0;
+#A saved  1 1 0 0 0;
 #X obj 1060 950 bop.receive;
 #A saved ;
 #X obj 1280 950 bop.send;
 #A saved ;
+#X obj 340 590 bop.mix;
+#A saved 0 1.13876 0;
 #X connect 0 0 1 0;
 #X connect 0 0 8 0;
 #X connect 8 0 10 3;

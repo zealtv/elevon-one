@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1400 1005 12;
+#N canvas 0 23 1680 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -249,12 +249,9 @@ log playback., f 38;
 #X text 70 90 Elevon-One is a spatial metacomposition: a piece of music
 arranged in physical space (in such a way as to) musically respond
 to the movement of a solo-performer., f 48;
-#X text 100 240 The composition exists as a Pure Data patch that receives
-live or prerecorded motion data \, and leverages the *Bop* and *Elevon*
-libraries to render a musical response., f 38;
 #X text 490 110 Elevon is responsible for hierarchically arranging
 the musical sketchs in an n-dimensional viirtual space., f 42;
-#X text 490 200 The velocity brackets below are calculated to correlate
+#X text 490 170 The velocity brackets below are calculated to correlate
 to different human-scale acitvities., f 42;
 #X text 900 110 Bop is modular suite of music making tools \, providing
 synthesis \, sequencing \, sample playback \, and audio processing.
@@ -267,10 +264,10 @@ synthesis \, sequencing \, sample playback \, and audio processing.
 #000000 0;
 #X obj 900 90 cnv 10 300 10 empty \$0cvs0 Bop 1 -1 0 16 #a8caab #000000
 0;
-#X text 900 200 Bop sketches are created to work synchronously at a
+#X text 900 170 Bop sketches are created to work synchronously at a
 set of discrete tempos. (Different positions along the unified time
 spectrum)., f 42;
-#X text 640 310 By mapping discrete tempos to velocity brackets \,
+#X text 640 270 By mapping discrete tempos to velocity brackets \,
 musical events are distributed approximately evenly in space. [This
 needs a diagram], f 57;
 #X obj 100 1030 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
@@ -286,20 +283,23 @@ needs a diagram], f 57;
 #X obj 100 1170 s gs;
 #X text 300 1050 Heading;
 #X text 280 1140 Ground speed;
-#X text 100 180 Listen loudly and in the background., f 38;
+#X text 100 190 Listen loudly and in the background., f 38;
 #X obj 900 660 bop \$0;
 #A saved 110;
 #X obj 910 1210 bop-scope-testing;
 #X obj 910 1180 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
+#X text 100 240 The composition exists as a Pure Data patch that receives
+motion data \, and leverages the *Bop* and *Elevon* libraries to render
+a musical response., f 38;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
 #X connect 8 2 9 2;
 #X connect 8 3 9 3;
-#X connect 9 0 91 0;
-#X connect 9 1 91 1;
-#X connect 9 2 91 2;
-#X connect 9 3 91 3;
+#X connect 9 0 90 0;
+#X connect 9 1 90 1;
+#X connect 9 2 90 2;
+#X connect 9 3 90 3;
 #X connect 10 0 13 0;
 #X connect 11 0 10 0;
 #X connect 12 0 10 0;
@@ -329,8 +329,8 @@ needs a diagram], f 57;
 #X connect 62 0 53 0;
 #X connect 63 0 65 0;
 #X connect 65 0 52 0;
-#X connect 80 0 82 0;
-#X connect 82 0 81 0;
+#X connect 79 0 81 0;
+#X connect 81 0 80 0;
+#X connect 84 0 85 0;
 #X connect 85 0 86 0;
-#X connect 86 0 87 0;
-#X connect 93 0 92 0;
+#X connect 92 0 91 0;
