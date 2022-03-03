@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1680 1005 12;
+#N canvas 840 23 840 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -36,7 +36,7 @@
 #X msg 280 100 button \$1;
 #X msg 300 160 playhead \$1;
 #X obj 430 790 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 510 720 5 0 0 0 - - -, f 5;
 #X floatatom 588 638 5 0 0 0 - - -, f 5;
 #X msg 670 560 0 0;
@@ -60,7 +60,7 @@ spatial panning, f 64;
 #X text 710 560 useful for reusable generative algorithms;
 #X obj 430 890 switch~;
 #X obj 430 860 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 540 870 5 0 0 0 - - -, f 5;
 #X text 458 768 ACTIVE;
 #X text 548 698 RELATIVEPOS;
@@ -143,7 +143,7 @@ to bpm;
 #X obj 100 1510 declare -path ./sketches;
 #X obj 940 1120 sketch001;
 #X obj 940 1090 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 100 1490 declare -path ./samples;
 #X text 720 530 0.1;
 #X text 720 510 0;
@@ -164,8 +164,8 @@ to bpm;
 #X obj 40 135 pdinfo;
 #X obj 40 160 makefilename Pd-l2ork-%s;
 #X msg 40 185 label \$1;
-#X obj 40 80 bng 15 250 50 0 empty empty get\ PD\\\\\ version 17 7
-0 10 #fcfcfc #000000 #000000;
+#X obj 40 80 bng 15 250 50 0 empty empty get\ PD\\\\\\\\\\\\\\\\\\\\\ version
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 40 210 s \$0-version-text;
 #X obj 40 50 inlet;
 #X connect 0 0 1 0;
@@ -231,17 +231,17 @@ to bpm;
 #X connect 17 0 0 0;
 #X restore 520 400 pd map-groundspeed;
 #X obj 100 440 telemetry;
-#X msg 970 390 167.5, f 7;
-#X msg 1030 390 88;
-#X msg 1070 390 55;
-#X msg 1070 360 walk;
-#X msg 1150 360 move;
-#X msg 1150 390 5;
-#X msg 1030 360 jog;
-#X msg 970 360 sprint;
-#X msg 860 360 cruise;
+#X msg 940 390 167.5, f 7;
+#X msg 1000 390 88;
+#X msg 1040 390 55;
+#X msg 1040 360 walk;
+#X msg 1120 360 move;
+#X msg 1120 390 5;
+#X msg 1000 360 jog;
+#X msg 940 360 sprint;
+#X msg 830 360 cruise;
 #X text 650 940 Voices;
-#X msg 860 390 692.93;
+#X msg 830 390 692.93;
 #X text 100 350 This patch can receive live sensor data \, or playback
 a log of a previous session. Video recordings can be syncronished with
 log playback., f 38;
@@ -267,7 +267,7 @@ synthesis \, sequencing \, sample playback \, and audio processing.
 set of discrete tempos. (Different positions along the unified time
 spectrum)., f 42;
 #X obj 100 1030 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 400 1;
+#000000 #000000 0 1;
 #X obj 100 1080 s h;
 #X floatatom 100 1050 14 0 0 0 - - -, f 14;
 #X obj 100 1000 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0
@@ -295,15 +295,15 @@ a musical response., f 38;
 #X text 1320 530 The state of the composition can be represented by
 a heirarchy of hues., f 35;
 #X obj 990 720 bop.tick;
-#A saved 160;
-#X msg 1110 390 40;
+#A saved 40;
+#X msg 1080 390 40;
 #X obj 1100 850 s master-tick;
-#X msg 1190 390 1.42;
+#X msg 1160 390 1.42;
 #X obj 650 1070 metavoice002;
 #X text 640 270 By mapping increasing tempos to brackets of velocity
 \, musical events are distributed approximately evenly in space. [This
 needs a diagram], f 57;
-#X msg 1190 360 still;
+#X msg 1160 360 still;
 #X obj 650 1040 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X text 750 1070 Orientation Mixer, f 20;
@@ -311,11 +311,11 @@ needs a diagram], f 57;
 #X msg 1000 1050 bpm \$1;
 #X floatatom 1000 1020 5 0 0 0 - - -, f 5;
 #X obj 1010 1080 r master-tick;
-#X msg 1190 460 bpm \$1;
-#X floatatom 1190 430 5 0 0 0 - - -, f 5;
+#X msg 1150 460 bpm \$1;
+#X floatatom 1150 430 7 0 0 0 - - -, f 7;
 #X msg 940 1050 play \$1;
 #X obj 940 1030 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X msg 1000 1250 1.42;
 #X msg 1000 1320 bpm \$1;
 #X floatatom 1000 1290 5 0 0 0 - - -, f 5;
@@ -323,7 +323,36 @@ needs a diagram], f 57;
 #X msg 940 1320 play \$1;
 #X obj 940 1300 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X msg 930 390 258;
+#X msg 900 390 258;
+#N canvas 0 23 1081 1005 again 0;
+#X obj 20 60 bop;
+#X obj 200 400 bop.tick;
+#A saved 110;
+#X obj 200 820 bop.mix;
+#A saved 0 1.00479 0;
+#X obj 200 950 dac~;
+#X msg 330 350 60 127;
+#X msg 390 350 60 0;
+#X obj 200 530 bop.casio;
+#A saved 2.54891 3.95652 0.63587 0.0119148 0.298913 0.146739 0.38587
+0.342391 0 0.565217 0;
+#X msg 440 350 48 127;
+#X obj 540 420 bop.noteslider;
+#A saved 0 0 1.06422;
+#X obj 540 529 bop.notefx;
+#A saved -0.868571 0.08 0 0 100 127 1 0 0;
+#X obj 711 734 bop.ramp;
+#A saved 1 5.9 symbol 0 1 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 4 0 1 2;
+#X connect 5 0 1 2;
+#X connect 6 0 2 0;
+#X connect 6 1 2 1;
+#X connect 7 0 1 2;
+#X connect 8 0 9 0;
+#X connect 8 2 9 2;
+#X restore 930 1540 pd again;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
 #X connect 8 2 9 2;
