@@ -1,4 +1,4 @@
-#N canvas 572 23 1108 1005 12;
+#N canvas 286 23 1223 1005 12;
 #X obj 340 340 bop.noteslider;
 #A saved 5.58152 1 2.54128;
 #X obj 340 630 bop.rhodes;
@@ -32,7 +32,7 @@
 #A saved 0 0 1 0.01 0.396739 0.902174 0.244565 0.777174 0.434783 0.679348
 0;
 #X obj 1300 880 bop.mix;
-#A saved 0 0.238229 0.850394;
+#A saved 0 0.185475 0.645669;
 #X obj 1610 470 poly 2 1;
 #X obj 1610 560 gate 2;
 #X obj 1640 530 pack f f;
@@ -75,39 +75,37 @@ changes between tempos.;
 #X obj 810 150 bop.euclidean \$0;
 #A saved 8.47826 2.21739 0.26087 8 2.95 6.67857 4.45 1 1 127;
 #X obj 1400 40 bop.rhythm \$0;
-#A saved 16 1.58036 1 1 1\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 1\ 0\ 1\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
-;
+#A saved 16 1.58036 1 1 symbol;
 #X obj 1730 50 bop.rhythm \$0;
-#A saved 6.75 5.23274 1 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
-;
+#A saved 6.75 5.23274 1 1 symbol;
 #X obj 2040 50 bop.rhythm \$0;
-#A saved 16.25 4.31964 1 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
-;
+#A saved 16.25 4.31964 1 1 symbol;
 #X obj 1260 640 bop.sampler \$0;
-#A saved ride-sizzle.wav 0 0 0 1 0 3.7258 1;
+#A saved ride-sizzle.wav 0 0 0 1 0 1.52675 1;
 #X obj 1790 610 bop.sampler \$0;
 #A saved cayn02.wav 0.0901124 -7.55056 0.211957 1 0 4.60562 1;
 #X obj 1520 610 bop.sampler \$0;
-#A saved ride-sizzle.wav -0.674157 5.66292 0 1 0 4.2951 1;
+#A saved ride-sizzle.wav -0.674157 5.66292 0 1 0 2.94948 1;
 #X obj 2030 610 bop.sampler \$0;
 #A saved cayn01.wav 0 0 0.418478 1 0 4.2951 1;
-#X symbolatom 133 910 10 0 0 0 - - -, f 10;
-#X obj 133 870 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
-#X obj 177 996 print;
-#X obj 213 880 tgl 15 0 empty empty global 17 7 0 10 #fcfcfc #000000
+#X symbolatom 48 860 10 0 0 0 - - - 0;
+#X obj 48 820 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 92 946 print;
+#X obj 128 830 tgl 15 0 empty empty global 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 213 950 \$0;
-#X obj 213 910 sel 0 1;
-#X msg 243 950 0;
+#X obj 128 900 \$0;
+#X obj 128 860 sel 0 1;
+#X msg 158 900 0;
 #X obj 73 348 bop.tick \$0;
-#A saved 40;
+#A saved 44;
 #X obj 240 300 inlet;
 #X obj 1360 1030 rev3~ 100 90 3000 20;
 #X obj 196 481 s \$0-tick;
 #X obj 480 70 r \$0-tick;
 #X obj 730 40 r \$0-tick;
 #X obj 1670 10 r \$0-tick;
+#X obj 909 662 bz/inspect;
 #X connect 0 2 5 2;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;
