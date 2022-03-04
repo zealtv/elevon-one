@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1440 855 12;
+#N canvas 0 23 1680 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -19,9 +19,9 @@
 #X obj 30 1420 declare -path ./elevon;
 #X obj 30 1440 declare -path ./bop;
 #X obj 30 1460 declare -path ./subpatches;
-#X obj 830 420 bop.receive;
+#X obj 940 400 bop.receive;
 #A saved master;
-#X obj 830 480 bop.mix;
+#X obj 940 470 bop.mix;
 #A saved 0 1.06745 0;
 #X obj 380 390 lvn.hyperstave 7;
 #X msg 460 350 connect 0;
@@ -233,33 +233,33 @@ composition at particular velocities, f 46;
 #X connect 17 0 0 0;
 #X restore 380 280 pd map-groundspeed;
 #X obj 30 280 telemetry;
-#X msg 810 310 167.5, f 7;
-#X msg 870 310 88;
-#X msg 910 310 55;
-#X msg 910 280 walk;
-#X msg 990 280 move;
-#X msg 990 310 5;
-#X msg 870 280 jog;
-#X msg 810 280 sprint;
-#X msg 750 280 cruise;
+#X msg 920 290 167.5, f 7;
+#X msg 980 290 88;
+#X msg 1020 290 55;
+#X msg 1020 260 walk;
+#X msg 1100 260 move;
+#X msg 1100 290 5;
+#X msg 980 260 jog;
+#X msg 920 260 sprint;
+#X msg 860 260 cruise;
 #X text 380 840 Voices;
-#X msg 690 310 692.93;
+#X msg 800 290 692.93;
 #X text 30 180 This patch can receive live sensor data \, or playback
 a log of a previous session. Video recordings can be syncronished with
 log playback., f 37;
 #X text 30 60 Elevon-One is a spatial metacomposition: a piece of music
 arranged in physical space (in such a way as to) musically respond
 to the movement of a solo-performer., f 42;
-#X text 750 50 Bop is modular suite of music making tools \, providing
+#X text 800 50 Bop is modular suite of music making tools \, providing
 synthesis \, sequencing \, sample playback \, and audio processing.
 , f 42;
 #X text 850 1060 Tempo-fluid transition, f 23;
 #X obj 380 30 cnv 10 300 10 empty \$0cvs0 Elevon 1 -1 0 16 #ebebeb
 #000000 0;
-#X obj 750 30 cnv 10 300 10 empty \$0cvs0 Bop 1 -1 0 16 #ebebeb #000000
+#X obj 800 30 cnv 10 300 10 empty \$0cvs0 Bop 1 -1 0 16 #ebebeb #000000
 0;
 #X obj 30 870 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 9700 1;
+#000000 #000000 0 1;
 #X obj 30 920 s h;
 #X floatatom 30 890 14 0 0 0 - - -, f 14;
 #X obj 30 840 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
@@ -275,22 +275,22 @@ synthesis \, sequencing \, sample playback \, and audio processing.
 #X obj 170 1260 bop-scope-testing;
 #X obj 170 1230 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 830 600 dac~, f 10;
-#X obj 830 640 bop.tick;
+#X obj 940 590 dac~, f 10;
+#X obj 940 630 bop.tick;
 #A saved 1.42;
-#X msg 950 310 40;
-#X obj 1030 750 s master-tick;
-#X msg 1030 310 1.42;
+#X msg 1060 290 40;
+#X obj 1140 740 s master-tick;
+#X msg 1140 290 1.42;
 #X obj 380 980 metavoice002, f 25;
-#X msg 1030 280 still;
+#X msg 1140 260 still;
 #X obj 380 950 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 1080 1060 r master-tick;
-#X msg 1030 390 bpm \$1;
-#X floatatom 1030 360 7 0 0 0 - - -, f 7;
+#X msg 1140 370 bpm \$1;
+#X floatatom 1140 340 7 0 0 0 - - -, f 7;
 #X obj 1080 1350 r master-tick;
-#X msg 750 310 258;
-#X obj 960 780 s master-tick-time;
+#X msg 860 290 258;
+#X obj 1070 770 s master-tick-time;
 #N canvas 0 22 450 300 more-about-elevon 0;
 #X obj 136 33 r hues;
 #X obj 140 70 route 0;
@@ -305,16 +305,16 @@ heirarchy of hues., f 35;
 #X connect 2 0 4 0;
 #X restore 530 130 pd more-about-elevon;
 #N canvas 1109 140 450 300 more-about-bop 0;
-#X restore 930 130 pd more-about-bop;
+#X restore 980 110 pd more-about-bop;
 #X text 850 1350 loud and epic;
 #X text 850 880 casio rodeo, f 13;
-#X msg 690 280 speed;
+#X msg 800 260 speed;
 #X text 400 950 Azimuth Sparkles;
 #X text 400 880 Northern Harmonium, f 20;
 #X text 380 50 Elevon is a library for Pure Data responsible for hierarchically
 arranging musical sketches in an n-dimensional virtual space., f 35
 ;
-#X text 750 180 Each bop sketch can be composed at a variety of tempos.
+#X text 800 150 Each bop sketch can be composed at a variety of tempos.
 Sketches can be played atop each other (and themselves) at independant
 tempos., f 42;
 #X msg 1190 1060 amp 1;
@@ -324,11 +324,11 @@ tempos., f 42;
 #X msg 1250 1350 bpm 1.42;
 #X msg 1190 1350 bpm 12;
 #X msg 1320 1350 bpm 4;
-#X text 650 410 By the associating faster velocities with faster tempos
-\, an elastic relationship is created between musical events and physical
-space., f 16;
 #X text 380 180 At the top of the heirarchy is a set of velocity brackets.
 Each velocity bracket contains a unique musical sketch., f 42;
+#X text 690 420 By the associating higher velocities with faster tempos
+\, an elastic relationship is created between musical events and physical
+space., f 19;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
 #X connect 8 2 9 2;

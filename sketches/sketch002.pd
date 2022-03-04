@@ -16,7 +16,7 @@
 ;
 #X msg 2261 892 play 1;
 #X obj 2338 942 bop.rhythm;
-#A saved 24 2.42321 0 1 1\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 24 2.42321 0 0 1\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X msg 2537 896 play 1;
 #X obj 2640 940 bop.rhythm;
@@ -47,7 +47,7 @@
 #X obj 699 892 pack f f f;
 #X obj 840 940 route 1 2;
 #X obj 1820 1690 bop.reverb;
-#A saved 0.968478 0.0815217 1.21739 0.575378 0.740568 1 0;
+#A saved 0.968478 0.0815217 1.21739 0.575378 0.740568 0 0;
 #X obj 2120 2280 bop.synth;
 #A saved 0.01 0.440217 0.233696 0 0 0.0326087 0.293478 1 0.460303 0.0778582
 0.01 0.670019 0 0.0798314 0.048393;
@@ -85,7 +85,7 @@
 #X obj 690 1460 bop.reverb;
 #A saved 0.364674 0.733696 0.603261 0.188911 1 0 0;
 #X obj 3240 810 bop.sampler;
-#A saved cayn02.wav 0.00247191 0.269663 0.22 0 0 1.34561 1;
+#A saved cayn02.wav 0.00247191 0.269663 0.13 0 0 1.34561 1;
 #X obj 3240 1190 bop.reverb;
 #A saved 0.854891 0.353261 0.923913 0.230962 0.562341 0 0;
 #X msg 3400 720 start-position \$1;
@@ -110,7 +110,7 @@
 #X obj 750 770 route note;
 #X obj 1000 640 route note;
 #X msg 3230 710 \$1 50;
-#X obj 330 310 bop.send;
+#X obj 330 280 bop.send;
 #A saved master;
 #X obj 330 160 bop.mix;
 #A saved 0 0.548733 0;
@@ -138,8 +138,8 @@
 #X obj 1860 2130 lvn.localsend~ submix-r;
 #X obj 2140 3060 lvn.localsend~ submix-l;
 #X obj 2210 3030 lvn.localsend~ submix-r;
-#X obj 330 80 lvn.localreceive~ submix-l;
-#X obj 390 110 lvn.localreceive~ submix-r;
+#X obj 330 50 lvn.localreceive~ submix-l;
+#X obj 400 80 lvn.localreceive~ submix-r;
 #X obj 3240 1560 lvn.localsend~ submix-l;
 #X obj 3310 1530 lvn.localsend~ submix-r;
 #X obj 1670 1270 route cell;
@@ -191,7 +191,7 @@
 to it;
 #X msg 1637 1598 freeze \$1;
 #X obj 1640 1530 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 3020 820 bop.sampler;
 #A saved cayn01.wav 1 0.269663 0.48 0 0 1.34561 1;
 #X obj 3020 1050 bop.mix;
@@ -220,7 +220,8 @@ to it;
 #000000 #000000;
 #X msg 459 463 rhythm get;
 #X obj 59 794 bz/set;
-#X msg 60 840 note 3;
+#X msg 60 840 rhythm 1\ 0\ 0\ 1\ 1\ 0\ 0\ 1\ 1\ 0\ 0\ 1\ 1\ 0\ 0\ 1\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0
+;
 #X obj 390 430 r master-tick-time;
 #X obj 770 320 r master-tick-time;
 #X obj 1000 320 r master-tick-time;
@@ -233,7 +234,7 @@ to it;
 #X text 2560 2090 might need to amp this up a bit;
 #X obj 2570 2120 bop.mix;
 #A saved 0 1.95463 0;
-#X obj 651 59 inlet;
+#X obj 530 110 inlet;
 #X connect 0 0 1 0;
 #X connect 2 3 3 0;
 #X connect 3 0 32 0;
@@ -346,8 +347,6 @@ to it;
 #X connect 70 0 126 2;
 #X connect 72 0 71 0;
 #X connect 72 1 71 1;
-#X connect 72 2 71 2;
-#X connect 72 3 71 3;
 #X connect 73 2 80 2;
 #X connect 73 3 80 3;
 #X connect 74 0 79 0;
@@ -451,4 +450,4 @@ to it;
 #X connect 157 0 27 0;
 #X connect 157 1 27 1;
 #X connect 158 0 72 3;
-#X coords 0 -1 1 1 229 128 1 321 139;
+#X coords 0 -1 1 1 230 130 1 321 139;

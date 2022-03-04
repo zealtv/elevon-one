@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1680 1002 12;
+#N canvas 120 23 1440 855 12;
 #X obj 1519 394 inlet;
 #X obj 1534 432 switch~;
 #X obj 40 468 bop.ramp;
@@ -48,7 +48,7 @@
 #A saved 0;
 #X obj 520 500 bop.distortion;
 #A saved 0.0098 0.01 0.01 0 0;
-#X obj 280 710 bop.reverb;
+#X obj 280 730 bop.reverb;
 #A saved 0 0 0 0.0125 0.01 0 0;
 #X obj 520 650 bop.notelist;
 #A saved c4\ e4\ g4\ b5 0;
@@ -65,6 +65,10 @@
 #X obj 1754 108 bop.tick;
 #A saved 79;
 #X obj 920 760 bop;
+#X obj 40 600 bop.template;
+#A saved 0 0 0;
+#X obj 280 930 bop.out;
+#A saved 0 0 0 0;
 #X connect 0 0 1 0;
 #X connect 0 0 8 0;
 #X connect 5 2 7 2;
