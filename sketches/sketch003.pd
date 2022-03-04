@@ -2,7 +2,7 @@
 #X obj 305 456 bop.noteslider;
 #A saved 0 1 2.35761;
 #X obj 330 1250 bop.mix;
-#A saved 0 0.486812 0;
+#A saved 0 0.871189 0;
 #X obj 407 591 bop.notefx;
 #A saved 0 -2.49143 1 0 10.9756 64 1 47.2826 133.152;
 #X obj 330 1070 bop.distortion;
@@ -50,4 +50,4 @@
 #X connect 15 1 11 1;
 #X connect 15 2 16 0;
 #X connect 17 0 10 2;
-#X coords 0 -1 1 1 221 229 1 326 1229;
+#X coords 0 -1 1 1 256 229 1 326 1229;
