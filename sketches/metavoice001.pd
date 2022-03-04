@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 420 23 840 1005 12;
+#N canvas 420 23 840 855 12;
 #X obj 140 380 lvn.hyperstave 3;
 #X text 200 350 Elevation;
 #X obj 140 510 route 0 1 2, f 35;
@@ -9,7 +9,7 @@
 #X obj 100 150 lvn.stave;
 #X connect 0 0 1 0;
 #X restore 140 560 pd up;
-#N canvas 600 23 840 855 level 1;
+#N canvas 600 23 840 855 level 0;
 #X obj 100 100 inlet;
 #N canvas 600 23 840 855 north 0;
 #X obj 100 100 inlet;
@@ -72,7 +72,7 @@ and are output from its bottom right outlet, f 35;
 #X obj 290 350 inlet;
 #X obj 290 380 route notes;
 #X obj 260 1000 bop.mix;
-#A saved 0 0.490277 -0.910243;
+#A saved 0 0.54372 -0.814825;
 #X msg 490 940 amp \$1;
 #X obj 810 360 lvn.localsend pos;
 #X obj 680 870 lvn.localreceive pos;
@@ -261,6 +261,9 @@ is heard in across full field of view, f 34;
 #A saved 0 0.557734 0;
 #X floatatom 260 240 5 0 0 0 - - -, f 5;
 #X obj 297 258 loadbang;
+#X text 510 110 pull in an array of hue values in the right inlet.
+Leave mapping outside of voice, f 28;
+#X obj 450 90 inlet;
 #X connect 0 0 2 0;
 #X connect 2 0 4 0;
 #X connect 2 1 5 0;
