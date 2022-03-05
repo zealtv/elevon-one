@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1403 855 12;
+#N canvas 18 23 1403 855 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -25,7 +25,7 @@
 #A saved 0 1.06745 0;
 #X obj 380 390 lvn.hyperstave 7;
 #X msg 460 350 connect 0;
-#X msg 380 310 hue \$1;
+#X msg 380 350 hue \$1;
 #X obj 380 570 route 0 1 2 3 4 5 6, f 20;
 #N canvas 178 23 1324 942 still 0;
 #X obj 90 160 inlet;
@@ -60,7 +60,7 @@ spatial panning, f 64;
 #X text 710 560 useful for reusable generative algorithms;
 #X obj 430 890 switch~;
 #X obj 430 860 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X floatatom 540 870 5 0 0 0 - - -, f 5;
 #X text 458 768 ACTIVE;
 #X text 548 698 RELATIVEPOS;
@@ -178,37 +178,38 @@ to bpm;
 #X restore 30 1580 pd get-version;
 #X obj 830 910 sketch002, f 14;
 #X obj 830 880 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 380 910 metavoice001, f 25;
-#X text 1410 1660 🐉;
-#X obj 380 880 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
+#X obj 380 930 metavoice001, f 25;
+#X text 1410 1660 🐉;
+#X obj 380 900 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 830 1380 sketch003, f 36;
 #X obj 830 1350 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 30 1230 sketch;
 #N canvas 0 23 1440 855 map-groundspeed 0;
-#X obj 40 80 moses 0.1;
-#X obj 250 140 moses 1;
-#X obj 470 200 moses 2;
-#X obj 670 260 moses 7;
-#X obj 870 330 moses 15;
-#X obj 1080 400 moses 30;
-#X obj 40 450 sub.bop.util.scale 0 0.1 0 1;
-#X obj 250 450 sub.bop.util.scale 0.1 1 1 2;
-#X obj 470 450 sub.bop.util.scale 1 2 2 3;
-#X obj 670 450 sub.bop.util.scale 2 7 3 4;
-#X obj 870 450 sub.bop.util.scale 7 15 4 5;
-#X obj 1080 450 sub.bop.util.scale 15 30 5 6;
-#X obj 1300 450 sub.bop.util.scale 30 60 6 7;
-#X obj 40 700 / 7;
-#X obj 40 800 outlet;
-#X obj 40 760 clip 0 1;
-#X text 50 150 TODO: exponential scaling from still to moving, f 13
-;
-#X obj 40 30 r gs;
-#X text 80 30 It probably makes sense to lag this value to old the
+#X obj 200 150 moses 0.1;
+#X obj 410 210 moses 1;
+#X obj 630 270 moses 2;
+#X obj 830 330 moses 7;
+#X obj 1030 400 moses 15;
+#X obj 1240 470 moses 30;
+#X obj 200 520 sub.bop.util.scale 0 0.1 0 1;
+#X obj 410 520 sub.bop.util.scale 0.1 1 1 2;
+#X obj 630 520 sub.bop.util.scale 1 2 2 3;
+#X obj 830 520 sub.bop.util.scale 2 7 3 4;
+#X obj 1030 520 sub.bop.util.scale 7 15 4 5;
+#X obj 1240 520 sub.bop.util.scale 15 30 5 6;
+#X obj 1460 520 sub.bop.util.scale 30 60 6 7;
+#X obj 200 770 / 7;
+#X obj 200 870 outlet;
+#X obj 200 830 clip 0 1;
+#X text 210 220 TODO: exponential scaling from still to moving, f
+13;
+#X obj 200 100 r gs;
+#X text 240 100 It probably makes sense to lag this value to old the
 composition at particular velocities, f 46;
+#X obj 150 150 outlet;
 #X connect 0 0 6 0;
 #X connect 0 1 1 0;
 #X connect 1 0 7 0;
@@ -231,6 +232,7 @@ composition at particular velocities, f 46;
 #X connect 13 0 15 0;
 #X connect 15 0 14 0;
 #X connect 17 0 0 0;
+#X connect 17 0 19 0;
 #X restore 380 280 pd map-groundspeed;
 #X obj 30 280 telemetry;
 #X msg 930 290 88;
@@ -256,19 +258,19 @@ synthesis \, sequencing \, sample playback \, and audio processing.
 #000000 0;
 #X obj 750 30 cnv 10 300 10 empty \$0cvs0 Bop 1 -1 0 16 #ebebeb #000000
 0;
-#X obj 30 870 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 8200 1;
-#X obj 30 920 s h;
-#X floatatom 30 890 14 0 0 0 - - -, f 14;
-#X obj 30 840 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
-#X text 30 840 Manual Control;
-#X obj 30 960 hsl 250 15 0 60 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#X obj 30 440 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X floatatom 30 980 14 0 0 0 - - -, f 14;
-#X obj 30 1010 s gs;
-#X text 230 890 Heading;
-#X text 200 980 Ground speed;
+#X obj 30 490 s h;
+#X floatatom 30 460 14 0 0 0 - - -, f 14;
+#X obj 30 400 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X text 30 400 Manual Control;
+#X obj 30 530 hsl 250 15 0 60 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X floatatom 30 550 14 0 0 0 - - -, f 14;
+#X obj 30 580 s gs;
+#X text 230 460 Heading;
+#X text 200 550 Ground speed;
 #X text 30 140 Listen loudly and in the background., f 38;
 #X obj 170 1260 bop-scope-testing;
 #X obj 170 1230 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -279,26 +281,25 @@ synthesis \, sequencing \, sample playback \, and audio processing.
 #X msg 1010 290 40;
 #X obj 1090 740 s master-tick;
 #X msg 1090 290 1.42;
-#X obj 380 980 metavoice002, f 25;
+#X obj 380 1020 metavoice002, f 25;
 #X msg 1090 260 still;
-#X obj 380 950 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#X obj 380 990 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 1080 1060 r master-tick;
 #X msg 1090 370 bpm \$1;
 #X floatatom 1090 340 7 0 0 0 - - -, f 7;
 #X obj 1080 1350 r master-tick;
 #X obj 1020 770 s master-tick-time;
-#N canvas 0 22 450 300 more-about-elevon 0;
+#N canvas 495 23 450 300 more-about-elevon 1;
 #X obj 136 33 r hues;
 #X obj 140 70 route 0;
 #X obj 140 130 route 0 1 2 3 4 5 6;
-#X floatatom 190 100 5 0 0 0 - - -, f 5;
+#X floatatom 230 100 5 0 0 0 - - -, f 5;
 #X floatatom 140 159 5 0 0 0 - - -, f 5;
 #X text 70 200 The state of the composition can be represented by a
 heirarchy of hues., f 35;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
-#X connect 1 1 3 0;
 #X connect 2 0 4 0;
 #X restore 530 150 pd more-about-elevon;
 #N canvas 1109 140 450 300 more-about-bop 0;
@@ -306,8 +307,8 @@ heirarchy of hues., f 35;
 #X text 850 1350 loud and epic;
 #X text 850 880 casio rodeo, f 13;
 #X msg 750 260 speed;
-#X text 400 950 Azimuth Sparkles;
-#X text 400 880 Northern Harmonium, f 20;
+#X text 400 990 Azimuth Sparkles;
+#X text 400 900 Northern Harmonium, f 20;
 #X msg 1190 1060 amp 1;
 #X msg 1240 1060 bpm 1.42;
 #X msg 1310 1060 bpm 44;
@@ -315,9 +316,6 @@ heirarchy of hues., f 35;
 #X msg 1250 1350 bpm 1.42;
 #X msg 1190 1350 bpm 12;
 #X msg 1320 1350 bpm 4;
-#X text 700 420 The piece "Elevon-One" associates faster tempos with
-higher velocities to create an elastic relationship between time and
-space., f 13;
 #X text 380 50 Elevon is a library for Pure Data responsible arranging
 musical sketches in a common time line called a "Hyperstave". Incoming
 data can influence which hues of the hyperstave are heard., f 41;
@@ -330,6 +328,10 @@ flexible n-dimensional virtual space in which to arrange music., f
 #X text 750 160 Each bop sketch can be composed at a variety of tempos.
 Sketches can be played atop each other (and themselves) independantly.
 , f 45;
+#X text 670 430 This piece associates faster tempos with higher velocities
+to create an elastic relationship between time and space., f 18;
+#X floatatom 380 310 5 0 0 0 - - -, f 5;
+#X floatatom 330 310 5 0 0 0 - - -, f 5;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
 #X connect 8 2 9 2;
@@ -352,15 +354,16 @@ Sketches can be played atop each other (and themselves) independantly.
 #X connect 43 0 42 0;
 #X connect 46 0 44 0;
 #X connect 48 0 47 0;
-#X connect 50 0 12 0;
+#X connect 50 0 115 0;
+#X connect 50 1 114 0;
 #X connect 52 0 90 0;
 #X connect 53 0 90 0;
 #X connect 54 0 53 0;
 #X connect 55 0 56 0;
 #X connect 56 0 90 0;
 #X connect 57 0 52 0;
-#X connect 58 0 109 0;
-#X connect 59 0 110 0;
+#X connect 58 0 108 0;
+#X connect 59 0 109 0;
 #X connect 67 0 69 0;
 #X connect 69 0 68 0;
 #X connect 72 0 73 0;
@@ -376,7 +379,7 @@ Sketches can be played atop each other (and themselves) independantly.
 #X connect 89 0 8 3;
 #X connect 90 0 89 0;
 #X connect 91 0 47 1;
-#X connect 97 0 111 0;
+#X connect 97 0 110 0;
 #X connect 100 0 24 1;
 #X connect 101 0 24 1;
 #X connect 102 0 24 1;
@@ -384,6 +387,7 @@ Sketches can be played atop each other (and themselves) independantly.
 #X connect 104 0 47 1;
 #X connect 105 0 47 1;
 #X connect 106 0 47 1;
+#X connect 108 0 90 0;
 #X connect 109 0 90 0;
 #X connect 110 0 90 0;
-#X connect 111 0 90 0;
+#X connect 114 0 12 0;

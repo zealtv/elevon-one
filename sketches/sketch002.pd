@@ -82,10 +82,10 @@
 #X obj 1030 790 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 1030 720 random 2;
-#X obj 690 1460 bop.reverb;
+#X obj 730 1540 bop.reverb;
 #A saved 0.364674 0.733696 0.603261 0.188911 1 0 0;
 #X obj 3240 810 bop.sampler;
-#A saved cayn02.wav 0.00247191 0.269663 0.13 0 0 1.34561 1;
+#A saved cayn02.wav 0.00247191 0.269663 0.91 0 0 1.34561 1;
 #X obj 3240 1190 bop.reverb;
 #A saved 0.854891 0.353261 0.923913 0.230962 0.562341 0 0;
 #X msg 3400 720 start-position \$1;
@@ -132,8 +132,8 @@
 #A saved 1;
 #X obj 1820 1870 bop.distortion;
 #A saved 0.225986 0.293354 0.763261 1.40435 0.0652174;
-#X obj 639 2465 lvn.localsend~ submix-l;
-#X obj 829 2455 lvn.localsend~ submix-r;
+#X obj 720 2460 lvn.localsend~ submix-l;
+#X obj 780 2430 lvn.localsend~ submix-r;
 #X obj 1820 2160 lvn.localsend~ submix-l;
 #X obj 1860 2130 lvn.localsend~ submix-r;
 #X obj 2140 3060 lvn.localsend~ submix-l;
@@ -168,7 +168,7 @@
 #A saved -0.582857 -2.77714 0 0 90.2439 106 1 74.4565 0.543478;
 #X obj 720 2000 bop.distortion;
 #A saved 0.879816 0.778582 0.62606 0.784783 0.684783;
-#X obj 740 2330 bop.mix;
+#X obj 720 2310 bop.mix;
 #A saved 0 0.512017 0;
 #X obj 1270 520 bop.notelist;
 #A saved c4\ d3\ g4\ b5 0;
@@ -185,7 +185,7 @@
 #X obj 3240 1390 bop.mix;
 #A saved 0 0.637657 0.283465;
 #X text 3160 3160 test;
-#X obj 720 1660 bop.mix;
+#X obj 730 1720 bop.mix;
 #A saved 0 0.312438 -0.251969;
 #X text 940 1840 This item should be pointed somewhere to draw you
 to it;
@@ -196,7 +196,7 @@ to it;
 #A saved cayn01.wav 1 0.269663 0.48 0 0 1.34561 1;
 #X obj 3020 1050 bop.mix;
 #A saved 0 0.189621 0.755906;
-#X obj 730 2140 bop.reverb;
+#X obj 720 2140 bop.reverb;
 #A saved 0.92663 0.197011 1.91304 0.148935 0.927665 0 0;
 #X obj 2300 1850 bop.notefx;
 #A saved 0 -1.21429 0 0 57.9268 118 1 59.2391 35.8696;
