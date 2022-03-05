@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 18 23 1403 855 12;
+#N canvas 8 23 1322 1005 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -10,21 +10,21 @@
 0;
 #X obj 830 840 cnv 15 500 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 30 1200 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
-#X obj 30 1390 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
-0;
-#X obj 30 1560 cnv 15 240 15 empty \$0-version-text Pd-l2ork-2.17.0\ 20210829-rev.e47b7c65
+#X obj 380 1100 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0
+#404040 0;
+#X obj 380 1250 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0
+#404040 0;
+#X obj 380 1420 cnv 15 240 15 empty \$0-version-text Pd-l2ork-2.17.0\ 20210829-rev.e47b7c65
 5 6 0 10 #e0e0e0 #404040 0;
-#X obj 30 1420 declare -path ./elevon;
-#X obj 30 1440 declare -path ./bop;
-#X obj 30 1460 declare -path ./subpatches;
+#X obj 380 1280 declare -path ./elevon;
+#X obj 380 1300 declare -path ./bop;
+#X obj 380 1320 declare -path ./subpatches;
 #X obj 890 400 bop.receive;
 #A saved master;
 #X obj 890 470 bop.mix;
 #A saved 0 1.06745 0;
 #X obj 380 390 lvn.hyperstave 7;
-#X msg 460 350 connect 0;
+#X msg 550 330 connect 0;
 #X msg 380 350 hue \$1;
 #X obj 380 570 route 0 1 2 3 4 5 6, f 20;
 #N canvas 178 23 1324 942 still 0;
@@ -60,7 +60,7 @@ spatial panning, f 64;
 #X text 710 560 useful for reusable generative algorithms;
 #X obj 430 890 switch~;
 #X obj 430 860 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 540 870 5 0 0 0 - - -, f 5;
 #X text 458 768 ACTIVE;
 #X text 548 698 RELATIVEPOS;
@@ -137,14 +137,14 @@ to bpm;
 #N canvas 615 23 450 300 speed 0;
 #X obj 148 167 inlet;
 #X restore 500 600 pd speed;
-#X obj 460 320 loadbang;
+#X obj 550 300 loadbang;
 #X obj 30 30 cnv 3 297 8 empty \$0cvs0 -=ELEVON-ONE=- 23 -3 0 30 #ff9999
 #000000 0;
-#X obj 30 1500 declare -path ./sketches;
+#X obj 380 1360 declare -path ./sketches;
 #X obj 830 1090 sketch001, f 36;
 #X obj 830 1060 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
-#X obj 30 1480 declare -path ./samples;
+#000000 0 1;
+#X obj 380 1340 declare -path ./samples;
 #X text 580 420 0.1;
 #X text 580 400 0;
 #X text 580 440 1;
@@ -153,11 +153,11 @@ to bpm;
 #X text 580 500 15;
 #X text 580 520 30;
 #X text 580 380 m/s;
-#X obj 30 1520 declare -path ./templates;
-#X obj 90 1230 metavoice;
-#X obj 30 1260 stave-subpatch;
-#X text 30 1390 Libraries and Assets;
-#X text 30 1200 Templates;
+#X obj 380 1380 declare -path ./templates;
+#X obj 440 1130 metavoice;
+#X obj 380 1160 stave-subpatch;
+#X text 380 1250 Libraries and Assets;
+#X text 380 1100 Templates;
 #X text 830 840 Sketches;
 #N canvas 495 23 744 477 get-version 0;
 #X msg 40 110 l2ork_version;
@@ -175,7 +175,7 @@ to bpm;
 #X connect 4 0 0 0;
 #X connect 6 0 4 0;
 #X coords 0 -1 1 1 160 15 2 40 80;
-#X restore 30 1580 pd get-version;
+#X restore 380 1440 pd get-version;
 #X obj 830 910 sketch002, f 14;
 #X obj 830 880 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
@@ -186,7 +186,7 @@ to bpm;
 #X obj 830 1380 sketch003, f 36;
 #X obj 830 1350 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 30 1230 sketch;
+#X obj 380 1130 sketch;
 #N canvas 0 23 1440 855 map-groundspeed 0;
 #X obj 200 150 moses 0.1;
 #X obj 410 210 moses 1;
@@ -258,26 +258,24 @@ synthesis \, sequencing \, sample playback \, and audio processing.
 #000000 0;
 #X obj 750 30 cnv 10 300 10 empty \$0cvs0 Bop 1 -1 0 16 #ebebeb #000000
 0;
-#X obj 30 440 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#X obj 70 1170 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X obj 30 490 s h;
-#X floatatom 30 460 14 0 0 0 - - -, f 14;
-#X obj 30 400 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+#X obj 40 850 cnv 15 260 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X text 30 400 Manual Control;
-#X obj 30 530 hsl 250 15 0 60 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#X text 40 850 Manual Control;
+#X obj 50 1360 hsl 250 15 0 60 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 0 1;
-#X floatatom 30 550 14 0 0 0 - - -, f 14;
-#X obj 30 580 s gs;
-#X text 230 460 Heading;
-#X text 200 550 Ground speed;
+#X floatatom 50 1380 14 0 0 0 - - -, f 14;
+#X obj 50 1410 s gs;
+#X text 90 1140 Heading;
+#X text 150 1380 Ground speed;
 #X text 30 140 Listen loudly and in the background., f 38;
-#X obj 170 1260 bop-scope-testing;
-#X obj 170 1230 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 520 1160 bop-scope-testing;
+#X obj 520 1130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 890 590 dac~, f 10;
 #X obj 890 630 bop.tick;
-#A saved 40;
+#A saved 88;
 #X msg 1010 290 40;
 #X obj 1090 740 s master-tick;
 #X msg 1090 290 1.42;
@@ -290,7 +288,7 @@ synthesis \, sequencing \, sample playback \, and audio processing.
 #X floatatom 1090 340 7 0 0 0 - - -, f 7;
 #X obj 1080 1350 r master-tick;
 #X obj 1020 770 s master-tick-time;
-#N canvas 495 23 450 300 more-about-elevon 1;
+#N canvas 495 23 450 300 more-about-elevon 0;
 #X obj 136 33 r hues;
 #X obj 140 70 route 0;
 #X obj 140 130 route 0 1 2 3 4 5 6;
@@ -301,9 +299,9 @@ heirarchy of hues., f 35;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
-#X restore 530 150 pd more-about-elevon;
+#X restore 530 110 pd more-about-elevon;
 #N canvas 1109 140 450 300 more-about-bop 0;
-#X restore 930 120 pd more-about-bop;
+#X restore 930 110 pd more-about-bop;
 #X text 850 1350 loud and epic;
 #X text 850 880 casio rodeo, f 13;
 #X msg 750 260 speed;
@@ -316,29 +314,47 @@ heirarchy of hues., f 35;
 #X msg 1250 1350 bpm 1.42;
 #X msg 1190 1350 bpm 12;
 #X msg 1320 1350 bpm 4;
-#X text 380 50 Elevon is a library for Pure Data responsible arranging
-musical sketches in a common time line called a "Hyperstave". Incoming
-data can influence which hues of the hyperstave are heard., f 41;
 #X msg 870 290 172, f 7;
 #X msg 810 290 344;
 #X msg 750 290 688;
-#X text 380 190 Hyperstaves can contain hyperstaves \, leading to a
-flexible n-dimensional virtual space in which to arrange music., f
-42;
-#X text 750 160 Each bop sketch can be composed at a variety of tempos.
-Sketches can be played atop each other (and themselves) independantly.
+#X text 660 430 This piece associates faster tempos with higher velocities
+to create an elastic relationship between time and space., f 25;
+#X floatatom 460 310 9 0 0 0 - - -, f 9;
+#X floatatom 380 310 9 0 0 0 - - -, f 9;
+#X obj 50 1140 r h;
+#X obj 50 1190 +;
+#X obj 50 1280 s h-offset;
+#X obj 50 1219 % 360;
+#X obj 50 1250 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 16602 1;
+#X obj 60 970 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 13100 1;
+#X obj 40 990 +;
+#X obj 90 1019 hsl 249 15 0 360 0 0 empty empty empty -2 -8 0 10 #fcfcfc
+#000000 #000000 13433 1;
+#X floatatom 40 1039 5 0 0 0 - - -, f 5;
+#X obj 40 1019 % 360;
+#X obj 40 940 r pitch;
+#X text 380 50 Elevon is a library for Pure Data responsible for arranging
+musical sketches in a common timeline called a "Hyperstave"., f 41
+;
+#X text 380 200 Hyperstaves can contain child hyperstaves \, leading
+to a flexible n-dimensional virtual space in which to arrange music.
+, f 42;
+#X obj 40 1069 s pitch-offset;
+#X text 110 939 Pitch;
+#X text 380 140 Incoming data can influence which hues of the hyperstave
+are heard \, translating data to music in the process., f 42;
+#X text 750 160 Each bop sketch can be played at a variety of tempos.
+Sketches can be played atop each other and have indepdendant clocks.
 , f 45;
-#X text 670 430 This piece associates faster tempos with higher velocities
-to create an elastic relationship between time and space., f 18;
-#X floatatom 380 310 5 0 0 0 - - -, f 5;
-#X floatatom 330 310 5 0 0 0 - - -, f 5;
 #X connect 8 0 9 0;
 #X connect 8 1 9 1;
 #X connect 8 2 9 2;
 #X connect 8 3 9 3;
-#X connect 9 0 80 0;
-#X connect 9 1 80 1;
-#X connect 9 3 81 3;
+#X connect 9 0 78 0;
+#X connect 9 1 78 1;
+#X connect 9 3 79 3;
 #X connect 10 0 13 0;
 #X connect 11 0 10 0;
 #X connect 12 0 10 0;
@@ -354,40 +370,49 @@ to create an elastic relationship between time and space., f 18;
 #X connect 43 0 42 0;
 #X connect 46 0 44 0;
 #X connect 48 0 47 0;
-#X connect 50 0 115 0;
-#X connect 50 1 114 0;
-#X connect 52 0 90 0;
-#X connect 53 0 90 0;
+#X connect 50 0 110 0;
+#X connect 50 1 109 0;
+#X connect 52 0 88 0;
+#X connect 53 0 88 0;
 #X connect 54 0 53 0;
 #X connect 55 0 56 0;
-#X connect 56 0 90 0;
+#X connect 56 0 88 0;
 #X connect 57 0 52 0;
-#X connect 58 0 108 0;
-#X connect 59 0 109 0;
-#X connect 67 0 69 0;
-#X connect 69 0 68 0;
-#X connect 72 0 73 0;
-#X connect 73 0 74 0;
-#X connect 79 0 78 0;
-#X connect 81 2 92 0;
-#X connect 81 3 83 0;
-#X connect 82 0 90 0;
-#X connect 84 0 90 0;
-#X connect 86 0 84 0;
-#X connect 87 0 85 0;
-#X connect 88 0 24 1;
-#X connect 89 0 8 3;
-#X connect 90 0 89 0;
-#X connect 91 0 47 1;
-#X connect 97 0 110 0;
+#X connect 58 0 105 0;
+#X connect 59 0 106 0;
+#X connect 67 0 112 1;
+#X connect 70 0 71 0;
+#X connect 71 0 72 0;
+#X connect 77 0 76 0;
+#X connect 79 3 81 0;
+#X connect 79 3 90 0;
+#X connect 80 0 88 0;
+#X connect 82 0 88 0;
+#X connect 84 0 82 0;
+#X connect 85 0 83 0;
+#X connect 86 0 24 1;
+#X connect 87 0 8 3;
+#X connect 88 0 87 0;
+#X connect 89 0 47 1;
+#X connect 95 0 107 0;
+#X connect 98 0 24 1;
+#X connect 99 0 24 1;
 #X connect 100 0 24 1;
-#X connect 101 0 24 1;
-#X connect 102 0 24 1;
-#X connect 103 0 42 1;
+#X connect 101 0 42 1;
+#X connect 102 0 47 1;
+#X connect 103 0 47 1;
 #X connect 104 0 47 1;
-#X connect 105 0 47 1;
-#X connect 106 0 47 1;
-#X connect 108 0 90 0;
-#X connect 109 0 90 0;
-#X connect 110 0 90 0;
-#X connect 114 0 12 0;
+#X connect 105 0 88 0;
+#X connect 106 0 88 0;
+#X connect 107 0 88 0;
+#X connect 109 0 12 0;
+#X connect 111 0 112 0;
+#X connect 112 0 114 0;
+#X connect 114 0 115 0;
+#X connect 115 0 113 0;
+#X connect 116 0 117 1;
+#X connect 117 0 120 0;
+#X connect 119 0 124 0;
+#X connect 120 0 119 0;
+#X connect 120 0 118 0;
+#X connect 121 0 117 0;
