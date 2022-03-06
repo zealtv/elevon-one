@@ -1,13 +1,13 @@
 #N canvas 30 23 956 606 10;
 #X msg 160 370 010.LOG;
-#X obj 110 170 bng 20 250 50 0 \$0-go \$0-go > 8 8 0 10 #fcfcfc #000000
+#X obj 110 160 bng 20 250 50 0 \$0-go \$0-go > 8 8 0 10 #fcfcfc #000000
 #000000;
 #X msg 480 170 rewind;
 #X obj 20 330 gate, f 14;
-#X obj 140 170 tgl 20 0 \$0-loop empty ↩︎ 4 6 0 20 #fcfcfc #000000
+#X obj 140 160 tgl 20 0 \$0-loop empty ↩︎ 4 6 0 20 #fcfcfc #000000
 #000000 0 1;
 #X obj 100 250 openpanel;
-#X obj 190 120 bng 30 250 50 0 \$0-load empty load 3 13 0 10 #ffffff
+#X obj 150 120 bng 30 250 50 0 \$0-load empty load 3 13 0 10 #ffffff
 #ffffff #000000;
 #X msg 140 340 /Users/bob/SYNC/PHD/DATA/telemosc3-testing/telemosc3.log
 ;
@@ -2068,14 +2068,14 @@
 #X obj 100 220 r \$0-load;
 #X obj 20 300 r \$0-loop;
 #X obj 280 140 t b b;
-#X obj 200 170 bng 20 250 50 0 \$0-rewind empty |<< 2 8 0 8 #fcfcfc
+#X obj 200 160 bng 20 250 50 0 \$0-rewind empty |<< 2 8 0 8 #fcfcfc
 #000000 #000000;
 #X obj 480 140 r \$0-rewind;
-#X obj 170 170 bng 20 250 50 0 \$0-pause empty || 5 8 0 8 #fcfcfc #000000
+#X obj 170 160 bng 20 250 50 0 \$0-pause empty || 5 8 0 8 #fcfcfc #000000
 #000000;
 #X obj 410 140 r \$0-pause;
 #X msg 410 165 tempo 0;
-#X text 110 120 LOG PLAYBACK;
+#X text 130 100 LOG PLAYBACK;
 #X connect 0 0 10 0;
 #X connect 2 0 10 1;
 #X connect 3 0 11 0;
@@ -2092,4 +2092,4 @@
 #X connect 17 0 2 0;
 #X connect 19 0 20 0;
 #X connect 20 0 10 1;
-#X coords 0 -1 1 1 130 100 2 100 100;
+#X coords 0 -1 1 1 130 90 2 100 100;
