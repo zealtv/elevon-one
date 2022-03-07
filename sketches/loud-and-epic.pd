@@ -1,7 +1,7 @@
 #N struct text float x float y text t;
 #N canvas 360 23 1252 855 12;
 #X obj 340 1250 bop.mix;
-#A saved 0 0.32752 0;
+#A saved 0 0.694013 0;
 #X obj 407 591 bop.notefx;
 #A saved 0 0.222857 1 0 33.5366 8.5 1 4.34783 133.152;
 #X obj 330 1070 bop.distortion;
@@ -19,7 +19,7 @@
 #A saved 1 5.9 noteslider 0 1 0;
 #X obj 350 1520 bop.send;
 #A saved master;
-#X obj 580 1210 inlet;
+#X obj 610 1150 inlet;
 #X obj 180 130 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
 #X text 100 50 use to blur transition into sprint;
@@ -44,7 +44,10 @@
 #X obj 710 210 > 0.8;
 #X msg 372 272 notelist d1 a1 d0 f#3 e3;
 #X obj 340 1350 bop;
-#A saved 4;
+#A saved 12;
+#X obj 620 1180 route note;
+#X obj 630 1217 s from-note-\$0;
+#X obj 650 730 r from-note-\$0;
 #X connect 0 0 31 0;
 #X connect 0 1 31 1;
 #X connect 0 2 31 2;
@@ -60,6 +63,7 @@
 #X connect 6 0 12 0;
 #X connect 9 3 18 0;
 #X connect 11 0 0 3;
+#X connect 11 0 32 0;
 #X connect 12 0 7 0;
 #X connect 14 2 1 2;
 #X connect 15 0 14 3;
@@ -80,4 +84,6 @@
 #X connect 30 0 14 3;
 #X connect 31 0 10 0;
 #X connect 31 1 10 1;
+#X connect 32 0 33 0;
+#X connect 34 0 4 2;
 #X coords 0 -1 1 1 256 240 1 326 1229;

@@ -104,7 +104,7 @@ changes between tempos.;
 #X obj 1360 1030 rev3~ 100 90 3000 20;
 #X obj 909 662 bz/inspect;
 #X obj 90 450 bop;
-#A saved 110;
+#A saved 172;
 #X connect 0 2 5 2;
 #X connect 1 0 7 0;
 #X connect 1 1 7 1;

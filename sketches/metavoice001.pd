@@ -9,8 +9,8 @@
 #X obj 100 150 lvn.stave;
 #X connect 0 0 1 0;
 #X restore 140 560 pd up;
-#N canvas 789 101 840 855 level 1;
-#X obj 100 100 inlet;
+#N canvas 647 101 982 855 level 1;
+#X obj 100 0 inlet;
 #N canvas 888 95 1289 855 north 0;
 #X obj 100 100 inlet;
 #X obj 100 150 lvn.stave;
@@ -20,7 +20,7 @@
 #X msg 300 -10 button \$1;
 #X msg 320 50 playhead \$1;
 #X obj 730 400 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 810 330 5 0 0 0 - - -, f 5;
 #X floatatom 888 248 5 0 0 0 - - -, f 5;
 #X msg 970 170 0 1 0;
@@ -40,7 +40,7 @@ spatial panning, f 64;
 #X text 938 248 useful for volume automation;
 #X text 1010 170 useful for reusable generative algorithms;
 #X obj 730 470 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X floatatom 840 480 5 0 0 0 - - -, f 5;
 #X text 758 378 ACTIVE;
 #X text 848 308 RELATIVEPOS;
@@ -72,7 +72,7 @@ and are output from its bottom right outlet, f 35;
 #X obj 290 350 inlet;
 #X obj 290 380 route notes;
 #X obj 260 1000 bop.mix;
-#A saved 0 0.599977 0.714286;
+#A saved 0 0.01 1;
 #X msg 490 940 amp \$1;
 #X obj 810 360 lvn.localsend pos;
 #X obj 680 870 lvn.localreceive pos;
@@ -145,10 +145,10 @@ and are output from its bottom right outlet, f 35;
 #X connect 56 1 32 1;
 #X connect 58 0 33 0;
 #X restore 90 1110 pd north;
-#X obj 120 190 r h;
+#X obj 120 131 r h;
 #X obj 121 229 / 360;
 #X msg 120 260 hue \$1;
-#X obj 100 130 lvn.stave;
+#X obj 100 30 lvn.stave;
 #X obj 150 620 r h;
 #X obj 150 900 bop.notelist;
 #A saved c3\ e3\ d3\ f#3\ e3\ g3\ f#3\ a3\ g3\ b3\ a3\ c4\ b3\ d4\ c4\ a3\ b3\ g3\ a3\ f#3\ g3\ e3\ f#3\ d3\ e3\ c3\ d3\ b2
@@ -156,7 +156,7 @@ and are output from its bottom right outlet, f 35;
 #X obj 150 740 int;
 #X msg 150 820 note \$1;
 #X obj 150 780 change;
-#X obj 360 830 bz/prepend notelist;
+#X obj 460 800 bz/prepend notelist;
 #X msg 460 580 c3 e3 d3 f#3 e3 g3 f#3 a3 g3 b3 a3 c4 b3 d4 c4 a3 b3
 g3 a3 f#3 g3 e3 f#3 d3 e3 c3 d3 b2;
 #X obj 500 710 list length;
@@ -179,13 +179,17 @@ is driven by other melodic/harmonic data;
 #X text 350 100 A glok would be good for the flourish;
 #X obj 100 320 lvn.hyperstave 3;
 #X obj 100 420 route 0 1 2, f 27;
-#X text 320 340 A lower density hyperstave so that the north sound
-is heard in across full field of view, f 34;
 #X text 210 280 Crunchy ground;
+#X obj 120 161 * 2;
+#X obj 120 190 % 360;
+#X text 320 340 Here a lower density hyperstave is used so that the
+northerly sound is heard in across a larger field of view., f 34;
+#X text 190 180 Doubling the incoming heading effectively doubles the
+density of the hyperstave., f 26;
 #X connect 0 0 5 0;
 #X connect 1 0 25 0;
 #X connect 1 1 24 0;
-#X connect 2 0 3 0;
+#X connect 2 0 31 0;
 #X connect 3 0 4 0;
 #X connect 4 0 28 0;
 #X connect 5 0 28 0;
@@ -207,6 +211,8 @@ is heard in across full field of view, f 34;
 #X connect 23 0 12 0;
 #X connect 28 0 29 0;
 #X connect 29 0 1 0;
+#X connect 31 0 32 0;
+#X connect 32 0 3 0;
 #X restore 220 560 pd level;
 #N canvas 892 110 450 300 down 0;
 #X obj 100 100 inlet;

@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 244 23 1191 1005 12;
+#N canvas 0 23 1036 1005 12;
 #X obj 160 90 inlet;
 #X obj 160 120 switch~;
 #X obj 2060 360 bop.rhythm;
@@ -8,7 +8,7 @@
 #X obj 2260 590 route note;
 #X obj 2000 840 select 1 2 3 4, f 68;
 #X obj 1800 930 bop.rhythm;
-#A saved 16.375 1.72083 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 16.375 1.72083 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X msg 1999 884 play 1;
 #X obj 2062 938 bop.rhythm;
@@ -20,7 +20,7 @@
 ;
 #X msg 2537 896 play 1;
 #X obj 2640 940 bop.rhythm;
-#A saved 24 2.17738 0 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
+#A saved 24 2.17738 0 0 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0
 ;
 #X msg 2840 902 play 1;
 #X obj 1800 1280 bop.notelist;
@@ -58,7 +58,7 @@
 #X obj 670 770 s \$0-ride;
 #X obj 2600 1580 r \$0-ride;
 #X obj 2260 640 s \$0-chord;
-#X obj 2000 800 r \$0-chord;
+#X obj 2010 780 r \$0-chord;
 #X obj 2330 1580 r \$0-chord;
 #X obj 2070 1720 bop.notelist;
 #A saved c2\ g2\ d3 0;
@@ -85,7 +85,7 @@
 #X obj 730 1540 bop.reverb;
 #A saved 0.364674 0.733696 0.603261 0.188911 1 0 0;
 #X obj 3240 810 bop.sampler;
-#A saved cayn02.wav 0.00247191 0.269663 0.19 0 0 4.34737 1;
+#A saved cayn02.wav 0.00247191 0.269663 0.74 0 0 4.34737 1;
 #X obj 3240 1190 bop.reverb;
 #A saved 0.854891 0.353261 0.923913 0.419546 0.562341 0 0;
 #X msg 3400 720 start-position \$1;
@@ -110,7 +110,7 @@
 #X obj 750 770 route note;
 #X obj 1000 640 route note;
 #X msg 3230 710 \$1 50;
-#X obj 330 390 bop.send;
+#X obj 330 400 bop.send;
 #A saved master;
 #X obj 330 160 bop.mix;
 #A saved 0 0.975469 0;
@@ -222,7 +222,7 @@ to it;
 #X text 2560 2090 might need to amp this up a bit;
 #X obj 530 110 inlet;
 #X obj 330 260 bop;
-#A saved 172;
+#A saved 88;
 #X connect 0 0 1 0;
 #X connect 2 3 3 0;
 #X connect 3 0 32 0;
@@ -341,8 +341,8 @@ to it;
 #X connect 73 3 80 3;
 #X connect 74 0 79 0;
 #X connect 74 1 79 1;
-#X connect 75 3 78 0;
 #X connect 75 3 76 3;
+#X connect 75 3 78 0;
 #X connect 76 2 74 2;
 #X connect 76 3 74 3;
 #X connect 77 0 109 0;
