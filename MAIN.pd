@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 411 24 1245 1005 12;
+#N canvas 516 23 1168 855 12;
 #X declare -path ./elevon;
 #X declare -path ./bop;
 #X declare -path ./subpatches;
@@ -144,7 +144,7 @@ to bpm;
 #X obj 20 30 cnv 3 297 8 empty \$0cvs0 -=ELEVON-ONE=- 23 -3 0 30 #ff9999
 #000000 0;
 #X obj 30 1320 declare -path ./sketches;
-#X obj 700 1200 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#X obj 700 1320 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 30 1300 declare -path ./samples;
 #X text 600 420 0.1;
@@ -166,7 +166,7 @@ to bpm;
 #X obj 40 135 pdinfo;
 #X obj 40 160 makefilename Pd-l2ork-%s;
 #X msg 40 185 label \$1;
-#X obj 40 80 bng 15 250 50 0 empty empty get\ current\\\\\ PD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ version
+#X obj 40 80 bng 15 250 50 0 empty empty get\ current\\\\\ PD\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*
 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 40 210 s \$0-version-text;
 #X obj 40 50 inlet;
@@ -183,8 +183,8 @@ to bpm;
 #X obj 400 910 metavoice001, f 25;
 #X text 1410 1960 🐉;
 #X obj 400 880 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
-#X obj 700 1540 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 700 1650 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 400 1290 sketch;
 #N canvas 840 23 840 1005 map-groundspeed 0;
@@ -249,7 +249,7 @@ composition at particular velocities, f 46;
 #X text 30 180 This patch can receive live sensor data \, or playback
 a log of a previous session. Video recordings can be syncronished with
 log playback., f 37;
-#X text 720 1200 Tempo-fluid transition, f 23;
+#X text 720 1320 Tempo-fluid transition, f 23;
 #X obj 400 30 cnv 10 300 10 empty \$0cvs0 Elevon 1 -1 0 16 #ebebeb
 #000000 0;
 #X obj 800 30 cnv 10 300 10 empty \$0cvs0 Bop 1 -1 0 16 #ebebeb #000000
@@ -272,7 +272,7 @@ log playback., f 37;
 #X obj 400 980 metavoice002, f 25;
 #X msg 1070 350 still;
 #X obj 400 950 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X msg 1000 460 bpm \$1;
 #X floatatom 1000 430 7 0 0 0 - - -, f 7;
 #N canvas 495 23 450 300 more-about-elevon 0;
@@ -289,17 +289,17 @@ heirarchy of hues., f 35;
 #X restore 570 110 pd more-about-elevon;
 #N canvas 1109 140 450 300 more-about-bop 0;
 #X restore 1000 80 pd more-about-bop;
-#X text 720 1540 loud and epic;
+#X text 720 1650 loud and epic;
 #X msg 740 350 speed;
 #X text 420 950 Azimuth Sparkles;
 #X text 420 880 Northern Harmonium, f 20;
-#X msg 950 1190 amp 1;
-#X msg 960 1220 bpm 1.42;
-#X msg 970 1250 bpm 44;
-#X msg 910 880 amp 1;
-#X msg 960 1560 bpm 1.42;
-#X msg 950 1530 bpm 12;
-#X msg 970 1590 bpm 4;
+#X msg 950 1310 amp 1;
+#X msg 960 1340 bpm 1.42;
+#X msg 970 1370 bpm 44;
+#X msg 1260 870 amp 1;
+#X msg 960 1670 bpm 1.42;
+#X msg 950 1640 bpm 12;
+#X msg 970 1700 bpm 4;
 #X msg 850 380 172, f 7;
 #X msg 790 380 344;
 #X msg 740 380 688;
@@ -313,9 +313,9 @@ to create an elastic relationship between time and space., f 25;
 #X text 250 880 Pitch;
 #X obj 30 1050 s h, f 5;
 #X obj 1000 500 s global-params;
-#X obj 940 910 r global-params;
-#X obj 980 1280 r global-params;
-#X obj 980 1620 r global-params;
+#X obj 1320 870 r global-params;
+#X obj 980 1400 r global-params;
+#X obj 980 1730 r global-params;
 #X msg 1060 460 play \$1;
 #X obj 1060 430 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
@@ -335,10 +335,10 @@ sketches., f 42;
 #X floatatom 30 990 5 0 0 0 - - -, f 5;
 #X obj 30 940 s pitch;
 #X floatatom 30 880 5 0 0 0 - - -, f 5;
-#X obj 700 910 casio-rodeo;
-#X obj 700 1240 tempo-fluid;
-#X obj 700 1570 loud-and-epic;
-#X msg 990 1650 note 40 100;
+#X obj 710 920 casio-rodeo;
+#X obj 700 1360 tempo-fluid;
+#X obj 700 1680 loud-and-epic;
+#X msg 990 1760 note 40 100;
 #X text 800 120 Bop sketches are created as Pure Data abstractions.
 Variations of these abstractions can be played atop each other \, each
 instance having an independant clock., f 43;
@@ -347,6 +347,12 @@ of incoming data., f 45;
 #X obj 30 1360 declare -path ./other;
 #X obj 80 991 r h;
 #X floatatom 110 990 5 0 0 0 - - -, f 5;
+#X obj 1134 1336 r gs;
+#X msg 1134 1394 bpm \$1;
+#X obj 1134 1365 * 88;
+#X msg 930 1270 rewind 1;
+#X text 773 882 walk at 88 bpm;
+#X text 890 880 jog at 172 bpm;
 #X connect 9 0 10 0;
 #X connect 9 1 10 1;
 #X connect 9 2 10 2;
@@ -411,3 +417,7 @@ of incoming data., f 45;
 #X connect 115 0 99 0;
 #X connect 119 0 118 1;
 #X connect 123 0 124 0;
+#X connect 125 0 127 0;
+#X connect 126 0 117 1;
+#X connect 127 0 126 0;
+#X connect 128 0 117 1;

@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 0 23 1036 1005 12;
+#N canvas 120 23 1440 855 12;
 #X obj 160 90 inlet;
 #X obj 160 120 switch~;
 #X obj 2060 360 bop.rhythm;
@@ -33,7 +33,7 @@
 #A saved g1\ c2\ b2 2.9;
 #X obj 2620 1290 bop.notelist;
 #A saved d2\ f#2\ g2 2.875;
-#X obj 630 390 bop.rhythm;
+#X obj 570 160 bop.rhythm;
 #A saved 24 2.35298 1 1 1\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 1\ 1\ 0\ 0\ 1\ 0\ 0\ 0\ 1\ 0\ 1\ 0\ 1
 ;
 #X obj 660 1010 bop.sampler;
@@ -47,7 +47,7 @@
 #X obj 739 872 pack f f f;
 #X obj 840 940 route 1 2;
 #X obj 1820 1690 bop.reverb;
-#A saved 0.968478 0.0815217 1.21739 0.575378 0.740568 1 0;
+#A saved 0.968478 0.0815217 1.21739 0.575378 0.740568 0 0;
 #X obj 2120 2280 bop.synth;
 #A saved 0.01 0.440217 0.233696 0 0 0.0326087 0.293478 0 0.460303 0.060619
 0.01 0.670019 0 0.0798314 0.048393;
@@ -83,9 +83,9 @@
 #000000 1 1;
 #X obj 1030 720 random 2;
 #X obj 730 1540 bop.reverb;
-#A saved 0.364674 0.733696 0.603261 0.188911 1 0 0;
+#A saved 0.364674 0.733696 0.603261 0.188911 1 1 0;
 #X obj 3240 810 bop.sampler;
-#A saved cayn02.wav 0.00247191 0.269663 0.74 0 0 4.34737 1;
+#A saved cayn02.wav 0.00247191 0.269663 0.35 0 0 4.34737 1;
 #X obj 3240 1190 bop.reverb;
 #A saved 0.854891 0.353261 0.923913 0.419546 0.562341 0 0;
 #X msg 3400 720 start-position \$1;
@@ -110,10 +110,10 @@
 #X obj 750 770 route note;
 #X obj 1000 640 route note;
 #X msg 3230 710 \$1 50;
-#X obj 330 400 bop.send;
+#X obj 330 450 bop.send;
 #A saved master;
 #X obj 330 160 bop.mix;
-#A saved 0 0.975469 0;
+#A saved 0 0.932104 0;
 #X obj 1810 1440 bop.notefx;
 #A saved 0.56 2.67429 0 0 40.2439 91 1 49.4565 106.522;
 #X obj 260 1090 bop.sampler;
@@ -177,7 +177,7 @@
 #X obj 1009 1407 > 1;
 #X obj 1009 1447 sel 1;
 #X obj 984 1503 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 979 1457 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 1009 1477 random 2;
@@ -186,12 +186,12 @@
 #A saved 0 0.586612 0.283465;
 #X text 3160 3160 test;
 #X obj 730 1720 bop.mix;
-#A saved 0 0.327656 -0.251969;
+#A saved 0 0.255099 -0.251969;
 #X text 940 1840 This item should be pointed somewhere to draw you
 to it;
 #X msg 1637 1598 freeze \$1;
 #X obj 1640 1530 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 1 1;
+#000000 0 1;
 #X obj 3020 820 bop.sampler;
 #A saved cayn01.wav 1 0.269663 0.48 0 0 5.43421 1;
 #X obj 3020 1050 bop.mix;
@@ -222,7 +222,8 @@ to it;
 #X text 2560 2090 might need to amp this up a bit;
 #X obj 530 110 inlet;
 #X obj 330 260 bop;
-#A saved 88;
+#A saved 172;
+#X obj 530 400 outlet;
 #X connect 0 0 1 0;
 #X connect 2 3 3 0;
 #X connect 3 0 32 0;
@@ -426,4 +427,5 @@ to it;
 #X connect 146 0 72 3;
 #X connect 147 0 71 0;
 #X connect 147 1 71 1;
-#X coords 0 -1 1 1 230 240 1 321 139;
+#X connect 147 3 148 0;
+#X coords 0 -1 1 1 542 240 1 321 139;
