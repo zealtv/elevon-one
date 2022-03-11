@@ -47,7 +47,7 @@
 #X obj 100 870 bop.send;
 #A saved master;
 #X obj 100 760 bop.mix;
-#A saved 0 1.0111 0;
+#A saved 0 0.327793 0;
 #X obj 210 160 inlet;
 #X obj 210 189 switch~;
 #X floatatom 323 585 0 0 120 0 - - -;
