@@ -1,5 +1,5 @@
 #N struct text float x float y text t;
-#N canvas 558 65 1252 855 12;
+#N canvas 428 65 1252 855 12;
 #X obj 340 1250 bop.mix;
 #A saved 0 1.41052 0.645669;
 #X obj 407 591 bop.notefx;
@@ -85,4 +85,4 @@
 #X connect 37 0 38 0;
 #X connect 38 0 28 0;
 #X connect 38 0 33 0;
-#X coords 0 -1 1 1 256 240 1 326 1229;
+#X coords 0 -1 1 1 256 262 1 326 1229;
