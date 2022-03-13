@@ -3,16 +3,16 @@
 #X obj 1220 310 bop.noteslider;
 #A saved 0 1 2.66972;
 #X obj 1220 620 bop.rhodes;
-#A saved 1;
+#A saved 0;
 #X obj 1470 1160 bop.mix;
-#A saved 0 0.868287 0;
+#A saved 1 0.868287 0;
 #X obj 1220 420 bop.notefx;
 #A saved 0.428571 -2.42857 0 0 100 38.5 1 38.0435 70.6522;
 #X obj 50 40 inlet;
 #X obj 50 100 switch~;
 #X obj 1470 750 bop.casio;
-#A saved 3.38587 3.30978 0.820652 0.01 0.76087 1 0 1 0.434783 0.516304
-1;
+#A saved 3.38587 3.30978 0.0271739 0.01 0.76087 1 0 1 0.434783 0.516304
+0;
 #X obj 430 70 lvn.localreceive~ submix-l;
 #X obj 490 100 lvn.localreceive~ submix-r;
 #X obj 360 360 bop.mix;
@@ -25,7 +25,7 @@
 #A saved noteslider 0 1 4.07979 1 0;
 #X obj 770 10 inlet;
 #X obj 360 460 bop;
-#A saved 585.142;
+#A saved 77.0774;
 #X obj 50 70 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
 1 1;
 #X obj 760 40 route pitch;
@@ -54,7 +54,7 @@
 #X msg 410 1100 12 30;
 #X msg 460 1100 12 100;
 #X obj 784 904 bop.notelist;
-#A saved d3\ a3\ g3\ b3 0;
+#A saved b1\ d2\ g2 0;
 #X obj 880 40 s inlet-data-\$0;
 #X obj 960 140 r inlet-data-\$0;
 #X obj 880 760 r inlet-data-\$0;
@@ -72,7 +72,7 @@
 #A saved 16.75 3.33631 1 1 1\ 1\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj -350 1270 bop.notelist;
-#A saved d3\ a3\ g3\ b3 0;
+#A saved b1\ d2\ g2 0;
 #X obj -254 1126 r inlet-data-\$0;
 #X obj -497 1254 route note;
 #X obj -380 1211 +;
@@ -80,7 +80,7 @@
 #X obj -274 1166 route note bpm;
 #X obj 765 827 +;
 #X obj 500 790 bop.rhythm \$0;
-#A saved 4.5 3.19583 1 1 1\ 0\ 1\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 4.5 4.31964 1 1 1\ 1\ 1\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj 720 770 + 1;
 #X obj 360 590 outlet~;
@@ -107,6 +107,9 @@
 #X text 1181 1646 HF damping \, percent;
 #X floatatom 1150 1540 5 0 0 0 - - -, f 5;
 #X obj 973 1676 rev2~ 50 98 3000 20;
+#X obj 690 220 bop.rhythm \$0;
+#A saved 3 5.9 1 1 1\ 1\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+;
 #X connect 0 2 3 2;
 #X connect 1 0 6 0;
 #X connect 1 1 6 1;
@@ -205,4 +208,5 @@
 #X connect 78 0 79 3;
 #X connect 79 0 66 0;
 #X connect 79 1 66 1;
+#X connect 80 3 50 0;
 #X coords 0 -1 1 1 245 253 1 341 329;
