@@ -1,8 +1,8 @@
 #N canvas 615 23 881 885 12;
 #X obj 150 120 bop.mix;
-#A saved 0 0.729337 0;
+#A saved 0 0.792803 0;
 #X obj 150 210 bop;
-#A saved 333.353;
+#A saved 148.135;
 #X obj 150 330 outlet~;
 #X obj 210 330 outlet~;
 #X obj 20 27 inlet;
@@ -21,7 +21,7 @@
 #X obj 150 380 bop.sampler;
 #A saved snare-tap-001.wav -0.168539 -0.134831 0.45 0 0 2.84597 1;
 #X obj 470 230 bop.rhythm;
-#A saved 8.625 3.8631 1 1 1\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
+#A saved 12.125 3.8631 1 1 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
 #X obj 683 477 route cell;
 #X obj 677 563 t b f;
@@ -38,7 +38,7 @@
 #000000 #000000;
 #X msg 465 708 60 100;
 #X obj 810 400 bop.sampler;
-#A saved snare-tap-002.wav 0 6.47191 0.0788044 0 0 0.931061 7;
+#A saved snare-tap-002.wav 0 6.47191 0.0788044 0 0 0.931061 1;
 #X obj 800 100 bop.rhythm;
 #A saved 4.75 4.14405 1 1 0\ 1\ 0\ 1\ 0\ 1\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0\ 0
 ;
@@ -48,7 +48,7 @@
 #A saved 0 0.861791 0;
 #X msg 890 330 51 127;
 #X msg 505 543 64 120;
-#X obj 383 615 rev3~ 90 90 3000 20;
+#X obj 383 615 rev3~ 75 90 3000 20;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 0 2 1 2;
@@ -80,6 +80,8 @@
 #X connect 22 0 19 0;
 #X connect 23 0 21 0;
 #X connect 23 1 21 1;
+#X connect 24 0 16 0;
+#X connect 24 1 16 1;
 #X connect 25 0 26 0;
 #X connect 26 0 27 0;
 #X connect 27 0 24 2;
